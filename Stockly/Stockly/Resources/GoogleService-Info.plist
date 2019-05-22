@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>852517576132-dg6e65m18n40k2klu97aolrc5otohoff.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.852517576132-dg6e65m18n40k2klu97aolrc5otohoff</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDQDAPo3olJA7t9fTgBaJZSSJwcZSKrkpE</string>
+	<key>GCM_SENDER_ID</key>
+	<string>852517576132</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>vicxruiz.Stockly</string>
+	<key>PROJECT_ID</key>
+	<string>stockly-e17f8</string>
+	<key>STORAGE_BUCKET</key>
+	<string>stockly-e17f8.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:852517576132:ios:f88706c8bf1a88db</string>
+	<key>DATABASE_URL</key>
+	<string>https://stockly-e17f8.firebaseio.com</string>
+</dict>
+</plist>

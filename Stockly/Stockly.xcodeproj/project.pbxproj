@@ -7,14 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		575BE6262294E39C00456C12 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 575BE6252294E39C00456C12 /* GoogleService-Info.plist */; };
 		576022472294E226003F1784 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576022462294E226003F1784 /* AppDelegate.swift */; };
 		576022492294E226003F1784 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576022482294E226003F1784 /* ViewController.swift */; };
 		5760224C2294E226003F1784 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5760224A2294E226003F1784 /* Main.storyboard */; };
 		5760224E2294E22D003F1784 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5760224D2294E22D003F1784 /* Assets.xcassets */; };
 		576022512294E22D003F1784 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5760224F2294E22D003F1784 /* LaunchScreen.storyboard */; };
+		57F765C62294E66000431F79 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 57F765C52294E66000431F79 /* Default-568h@2x.png */; };
+		57F765C82294E93900431F79 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57F765C72294E93900431F79 /* Onboarding.storyboard */; };
+		57F765CC2294E99C00431F79 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F765CB2294E99C00431F79 /* SignInViewController.swift */; };
+		57F765CE2294E9A800431F79 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F765CD2294E9A800431F79 /* SignUpViewController.swift */; };
+		57F765D02294EA2200431F79 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F765CF2294EA2200431F79 /* OnboardingViewController.swift */; };
+		57F765D22294EA3100431F79 /* OnboardingContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F765D12294EA3100431F79 /* OnboardingContentViewController.swift */; };
+		57F765D42294EA4600431F79 /* OnboardingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F765D32294EA4600431F79 /* OnboardingPageViewController.swift */; };
+		5FE9D54C2EA0A29077A5DCE7 /* Pods_Stockly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8896165C8C1E1A1C568E34C2 /* Pods_Stockly.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2EC461C1B133537BD2210919 /* Pods-Stockly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stockly.debug.xcconfig"; path = "Target Support Files/Pods-Stockly/Pods-Stockly.debug.xcconfig"; sourceTree = "<group>"; };
+		575BE6252294E39C00456C12 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		576022432294E226003F1784 /* Stockly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stockly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		576022462294E226003F1784 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		576022482294E226003F1784 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +33,15 @@
 		5760224D2294E22D003F1784 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		576022502294E22D003F1784 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		576022522294E22D003F1784 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57F765C52294E66000431F79 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		57F765C72294E93900431F79 /* Onboarding.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Onboarding.storyboard; path = ../../../../Onboarding/Onboarding/Storyboards/Onboarding.storyboard; sourceTree = "<group>"; };
+		57F765CB2294E99C00431F79 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignInViewController.swift; path = ../../../../Onboarding/Onboarding/Controllers/Login/SignInViewController.swift; sourceTree = "<group>"; };
+		57F765CD2294E9A800431F79 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = ../../../../Onboarding/Onboarding/Controllers/Login/SignUpViewController.swift; sourceTree = "<group>"; };
+		57F765CF2294EA2200431F79 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		57F765D12294EA3100431F79 /* OnboardingContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContentViewController.swift; sourceTree = "<group>"; };
+		57F765D32294EA4600431F79 /* OnboardingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageViewController.swift; sourceTree = "<group>"; };
+		8896165C8C1E1A1C568E34C2 /* Pods_Stockly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Stockly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6EF84E33B3923BA090D16A3 /* Pods-Stockly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stockly.release.xcconfig"; path = "Target Support Files/Pods-Stockly/Pods-Stockly.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +49,73 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5FE9D54C2EA0A29077A5DCE7 /* Pods_Stockly.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3223B0EDA53B3B493B4B8111 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8896165C8C1E1A1C568E34C2 /* Pods_Stockly.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		575BE6272294E3EB00456C12 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				576022462294E226003F1784 /* AppDelegate.swift */,
+				5760224D2294E22D003F1784 /* Assets.xcassets */,
+				575BE6252294E39C00456C12 /* GoogleService-Info.plist */,
+				576022522294E22D003F1784 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		575BE6282294E40400456C12 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		575BE6292294E40C00456C12 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		575BE62A2294E41B00456C12 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				57F765CD2294E9A800431F79 /* SignUpViewController.swift */,
+				57F765CB2294E99C00431F79 /* SignInViewController.swift */,
+				57F765CF2294EA2200431F79 /* OnboardingViewController.swift */,
+				57F765D12294EA3100431F79 /* OnboardingContentViewController.swift */,
+				57F765D32294EA4600431F79 /* OnboardingPageViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		575BE62B2294E42600456C12 /* Styling */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Styling;
+			sourceTree = "<group>";
+		};
 		5760223A2294E226003F1784 = {
 			isa = PBXGroup;
 			children = (
+				57F765C52294E66000431F79 /* Default-568h@2x.png */,
 				576022452294E226003F1784 /* Stockly */,
 				576022442294E226003F1784 /* Products */,
+				6B90094933674CD237A1EA42 /* Pods */,
+				3223B0EDA53B3B493B4B8111 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +130,34 @@
 		576022452294E226003F1784 /* Stockly */ = {
 			isa = PBXGroup;
 			children = (
-				576022462294E226003F1784 /* AppDelegate.swift */,
+				575BE62B2294E42600456C12 /* Styling */,
+				575BE62A2294E41B00456C12 /* Controllers */,
+				575BE6292294E40C00456C12 /* Views */,
+				575BE6282294E40400456C12 /* Models */,
+				575BE6272294E3EB00456C12 /* Resources */,
+				576022582294E325003F1784 /* Storyboards */,
 				576022482294E226003F1784 /* ViewController.swift */,
-				5760224A2294E226003F1784 /* Main.storyboard */,
-				5760224D2294E22D003F1784 /* Assets.xcassets */,
-				5760224F2294E22D003F1784 /* LaunchScreen.storyboard */,
-				576022522294E22D003F1784 /* Info.plist */,
 			);
 			path = Stockly;
+			sourceTree = "<group>";
+		};
+		576022582294E325003F1784 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				57F765C72294E93900431F79 /* Onboarding.storyboard */,
+				5760224F2294E22D003F1784 /* LaunchScreen.storyboard */,
+				5760224A2294E226003F1784 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		6B90094933674CD237A1EA42 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2EC461C1B133537BD2210919 /* Pods-Stockly.debug.xcconfig */,
+				B6EF84E33B3923BA090D16A3 /* Pods-Stockly.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +167,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 576022552294E22D003F1784 /* Build configuration list for PBXNativeTarget "Stockly" */;
 			buildPhases = (
+				BC69B5B3E1E794E5A7A50B00 /* [CP] Check Pods Manifest.lock */,
 				5760223F2294E226003F1784 /* Sources */,
 				576022402294E226003F1784 /* Frameworks */,
 				576022412294E226003F1784 /* Resources */,
+				CBEFBDDE9A1277E173474FBB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,10 +223,80 @@
 				576022512294E22D003F1784 /* LaunchScreen.storyboard in Resources */,
 				5760224E2294E22D003F1784 /* Assets.xcassets in Resources */,
 				5760224C2294E226003F1784 /* Main.storyboard in Resources */,
+				57F765C82294E93900431F79 /* Onboarding.storyboard in Resources */,
+				57F765C62294E66000431F79 /* Default-568h@2x.png in Resources */,
+				575BE6262294E39C00456C12 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BC69B5B3E1E794E5A7A50B00 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Stockly-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CBEFBDDE9A1277E173474FBB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Stockly/Pods-Stockly-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/JGProgressHUD/JGProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/LBTAComponents/LBTAComponents.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JGProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LBTAComponents.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Stockly/Pods-Stockly-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5760223F2294E226003F1784 /* Sources */ = {
@@ -136,7 +304,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				576022492294E226003F1784 /* ViewController.swift in Sources */,
+				57F765D22294EA3100431F79 /* OnboardingContentViewController.swift in Sources */,
 				576022472294E226003F1784 /* AppDelegate.swift in Sources */,
+				57F765D02294EA2200431F79 /* OnboardingViewController.swift in Sources */,
+				57F765CE2294E9A800431F79 /* SignUpViewController.swift in Sources */,
+				57F765D42294EA4600431F79 /* OnboardingPageViewController.swift in Sources */,
+				57F765CC2294E99C00431F79 /* SignInViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,11 +453,12 @@
 		};
 		576022562294E22D003F1784 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2EC461C1B133537BD2210919 /* Pods-Stockly.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PX6J4SWYW9;
-				INFOPLIST_FILE = Stockly/Info.plist;
+				INFOPLIST_FILE = Stockly/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -298,11 +472,12 @@
 		};
 		576022572294E22D003F1784 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B6EF84E33B3923BA090D16A3 /* Pods-Stockly.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PX6J4SWYW9;
-				INFOPLIST_FILE = Stockly/Info.plist;
+				INFOPLIST_FILE = Stockly/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
