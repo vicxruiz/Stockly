@@ -14,7 +14,6 @@
 		5760224E2294E22D003F1784 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5760224D2294E22D003F1784 /* Assets.xcassets */; };
 		576022512294E22D003F1784 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5760224F2294E22D003F1784 /* LaunchScreen.storyboard */; };
 		57F765C62294E66000431F79 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 57F765C52294E66000431F79 /* Default-568h@2x.png */; };
-		57F765C82294E93900431F79 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57F765C72294E93900431F79 /* Onboarding.storyboard */; };
 		57F765CC2294E99C00431F79 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F765CB2294E99C00431F79 /* SignInViewController.swift */; };
 		57F765CE2294E9A800431F79 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F765CD2294E9A800431F79 /* SignUpViewController.swift */; };
 		57F765D02294EA2200431F79 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F765CF2294EA2200431F79 /* OnboardingViewController.swift */; };
@@ -25,6 +24,7 @@
 		57F765DB2295848700431F79 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F765DA2295848700431F79 /* MainTabBarController.swift */; };
 		57F765DD229584EB00431F79 /* Credit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F765DC229584EB00431F79 /* Credit.swift */; };
 		57F765DF229586AD00431F79 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F765DE229586AD00431F79 /* WelcomeViewController.swift */; };
+		57F765E12295980200431F79 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57F765E02295980200431F79 /* Onboarding.storyboard */; };
 		5FE9D54C2EA0A29077A5DCE7 /* Pods_Stockly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8896165C8C1E1A1C568E34C2 /* Pods_Stockly.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,7 +39,6 @@
 		576022502294E22D003F1784 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		576022522294E22D003F1784 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		57F765C52294E66000431F79 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		57F765C72294E93900431F79 /* Onboarding.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Onboarding.storyboard; path = ../../../../Onboarding/Onboarding/Storyboards/Onboarding.storyboard; sourceTree = "<group>"; };
 		57F765CB2294E99C00431F79 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignInViewController.swift; path = ../../../../Onboarding/Onboarding/Controllers/Login/SignInViewController.swift; sourceTree = "<group>"; };
 		57F765CD2294E9A800431F79 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = ../../../../Onboarding/Onboarding/Controllers/Login/SignUpViewController.swift; sourceTree = "<group>"; };
 		57F765CF2294EA2200431F79 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
@@ -50,6 +49,7 @@
 		57F765DA2295848700431F79 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		57F765DC229584EB00431F79 /* Credit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credit.swift; sourceTree = "<group>"; };
 		57F765DE229586AD00431F79 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		57F765E02295980200431F79 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		8896165C8C1E1A1C568E34C2 /* Pods_Stockly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Stockly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6EF84E33B3923BA090D16A3 /* Pods-Stockly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stockly.release.xcconfig"; path = "Target Support Files/Pods-Stockly/Pods-Stockly.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -159,9 +159,9 @@
 		576022582294E325003F1784 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				57F765C72294E93900431F79 /* Onboarding.storyboard */,
-				5760224F2294E22D003F1784 /* LaunchScreen.storyboard */,
 				5760224A2294E226003F1784 /* Main.storyboard */,
+				5760224F2294E22D003F1784 /* LaunchScreen.storyboard */,
+				57F765E02295980200431F79 /* Onboarding.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -238,7 +238,7 @@
 				576022512294E22D003F1784 /* LaunchScreen.storyboard in Resources */,
 				5760224E2294E22D003F1784 /* Assets.xcassets in Resources */,
 				5760224C2294E226003F1784 /* Main.storyboard in Resources */,
-				57F765C82294E93900431F79 /* Onboarding.storyboard in Resources */,
+				57F765E12295980200431F79 /* Onboarding.storyboard in Resources */,
 				57F765C62294E66000431F79 /* Default-568h@2x.png in Resources */,
 				575BE6262294E39C00456C12 /* GoogleService-Info.plist in Resources */,
 			);

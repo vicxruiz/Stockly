@@ -73,7 +73,7 @@ class WelcomeController: UIViewController {
         }
         
         //updates attributes
-        navigationController?.navigationBar.barTintColor = UIColor(r: 240, g: 128, b: 128)
+        navigationController?.navigationBar.barTintColor = Service.designGrayColor
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.groupTableViewBackground]
     }
     
@@ -184,14 +184,14 @@ class WelcomeController: UIViewController {
             let backItem = UIBarButtonItem()
             backItem.title = "Back"
             navigationItem.backBarButtonItem = backItem
-            navigationItem.backBarButtonItem?.tintColor = UIColor(r: 255, g: 135, b: 135, a: 1)
+            navigationItem.backBarButtonItem?.tintColor = Service.designGrayColor
         }
         
         if segue?.identifier == "signUp" {
             let backItem = UIBarButtonItem()
             backItem.title = "Back"
             navigationItem.backBarButtonItem = backItem
-            navigationItem.backBarButtonItem?.tintColor = UIColor(r: 255, g: 135, b: 135, a: 1)
+            navigationItem.backBarButtonItem?.tintColor = Service.designGrayColor
         }
     }
 }
