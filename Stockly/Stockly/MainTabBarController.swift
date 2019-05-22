@@ -7,3 +7,22 @@
 //
 
 import Foundation
+import UIKit
+
+class MainTabBarController: UITabBarController {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .white
+        //checks logged in status of user
+        self.tabBar.layer.borderWidth = 0
+        self.tabBar.clipsToBounds = true
+        setupViewControllers()
+    }
+    
+    fileprivate func setupViewControllers() {
+        tabBar.unselectedItemTintColor = Service.designGrayColor
+        tabBar.tintColor = Service.darkBaseColor
+    }
+    
+}

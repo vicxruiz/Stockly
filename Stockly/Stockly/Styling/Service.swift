@@ -18,7 +18,7 @@ class Service {
     static let buttonBackgroundColor = UIColor.white
     static let buttonCornerRadius: CGFloat = 15
     static let butttonTitleFont: CGFloat = 18
-    
+    static let designGrayColor = UIColor(r: 206, g: 214, b: 227)
     //design == most of the app should have these colors
     static let baseColor = UIColor.blue
     static let darkBaseColor = UIColor.darkGray
