@@ -41,11 +41,11 @@ class OnboardingViewController: UIViewController, OnboardingPageViewControllerDe
     //MARK: Actions
     
     @IBAction func skipButtonTapped(sender: UIButton) {
-        performSegue(withIdentifier: "Login", sender: self)
+        performSegue(withIdentifier: "welcome", sender: self)
     }
     
     @IBAction func getStartedButtonPressed(_ sender: Any) {
-        performSegue(withIdentifier: "Login", sender: self)
+        performSegue(withIdentifier: "welcome", sender: self)
     }
     
     @IBAction func nextButtonTapped(sender: UIButton) {

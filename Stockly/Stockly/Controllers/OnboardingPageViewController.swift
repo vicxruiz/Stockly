@@ -19,7 +19,7 @@ class OnboardingPageViewController: UIPageViewController, UIPageViewControllerDa
     weak var onboardingDelegate: OnboardingPageViewControllerDelegate?
     
     var pageHeadings = ["Analyze Stocks With Ease", "Recommended Portfolios Just For You", "Market Projections For Your Favorite Stocks"]
-    var pageImages = ["Onboarding1", "Onboarding1", "Onboarding1"]
+    var pageImages = ["Predict", "Portfolio", "Projection"]
     var pageSubheadings = ["Easy access to real-time stock analysis across a number of markets.", "Use Stock.ly's smart-learning behavior to make a new investment and expand your portfolio.", "Users will be able to effeciently learn the current path of index funds, like the S&P 500 or DOW Jones"]
     
     var currentIndex = 0
