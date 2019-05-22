@@ -21,6 +21,10 @@
 		57F765D22294EA3100431F79 /* OnboardingContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F765D12294EA3100431F79 /* OnboardingContentViewController.swift */; };
 		57F765D42294EA4600431F79 /* OnboardingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F765D32294EA4600431F79 /* OnboardingPageViewController.swift */; };
 		57F765D62294EB1B00431F79 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F765D52294EB1B00431F79 /* Service.swift */; };
+		57F765D92295844A00431F79 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F765D82295844A00431F79 /* LaunchScreenViewController.swift */; };
+		57F765DB2295848700431F79 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F765DA2295848700431F79 /* MainTabBarController.swift */; };
+		57F765DD229584EB00431F79 /* Credit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F765DC229584EB00431F79 /* Credit.swift */; };
+		57F765DF229586AD00431F79 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F765DE229586AD00431F79 /* WelcomeViewController.swift */; };
 		5FE9D54C2EA0A29077A5DCE7 /* Pods_Stockly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8896165C8C1E1A1C568E34C2 /* Pods_Stockly.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +46,10 @@
 		57F765D12294EA3100431F79 /* OnboardingContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContentViewController.swift; sourceTree = "<group>"; };
 		57F765D32294EA4600431F79 /* OnboardingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageViewController.swift; sourceTree = "<group>"; };
 		57F765D52294EB1B00431F79 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		57F765D82295844A00431F79 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
+		57F765DA2295848700431F79 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		57F765DC229584EB00431F79 /* Credit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credit.swift; sourceTree = "<group>"; };
+		57F765DE229586AD00431F79 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		8896165C8C1E1A1C568E34C2 /* Pods_Stockly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Stockly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6EF84E33B3923BA090D16A3 /* Pods-Stockly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stockly.release.xcconfig"; path = "Target Support Files/Pods-Stockly/Pods-Stockly.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -73,6 +81,7 @@
 				5760224D2294E22D003F1784 /* Assets.xcassets */,
 				575BE6252294E39C00456C12 /* GoogleService-Info.plist */,
 				576022522294E22D003F1784 /* Info.plist */,
+				57F765DC229584EB00431F79 /* Credit.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -140,6 +149,9 @@
 				575BE6272294E3EB00456C12 /* Resources */,
 				576022582294E325003F1784 /* Storyboards */,
 				576022482294E226003F1784 /* ViewController.swift */,
+				57F765D82295844A00431F79 /* LaunchScreenViewController.swift */,
+				57F765DA2295848700431F79 /* MainTabBarController.swift */,
+				57F765DE229586AD00431F79 /* WelcomeViewController.swift */,
 			);
 			path = Stockly;
 			sourceTree = "<group>";
@@ -311,9 +323,13 @@
 				57F765D22294EA3100431F79 /* OnboardingContentViewController.swift in Sources */,
 				576022472294E226003F1784 /* AppDelegate.swift in Sources */,
 				57F765D02294EA2200431F79 /* OnboardingViewController.swift in Sources */,
+				57F765DB2295848700431F79 /* MainTabBarController.swift in Sources */,
 				57F765CE2294E9A800431F79 /* SignUpViewController.swift in Sources */,
 				57F765D42294EA4600431F79 /* OnboardingPageViewController.swift in Sources */,
+				57F765D92295844A00431F79 /* LaunchScreenViewController.swift in Sources */,
+				57F765DF229586AD00431F79 /* WelcomeViewController.swift in Sources */,
 				57F765CC2294E99C00431F79 /* SignInViewController.swift in Sources */,
+				57F765DD229584EB00431F79 /* Credit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
