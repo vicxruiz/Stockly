@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5717019F2295ECA000361B09 /* DataGetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5717019E2295ECA000361B09 /* DataGetter.swift */; };
 		571701A32297254400361B09 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571701A22297254400361B09 /* Constants.swift */; };
+		571701A52297259E00361B09 /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571701A42297259E00361B09 /* Singleton.swift */; };
 		575BE6262294E39C00456C12 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 575BE6252294E39C00456C12 /* GoogleService-Info.plist */; };
 		576022472294E226003F1784 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576022462294E226003F1784 /* AppDelegate.swift */; };
 		576022492294E226003F1784 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576022482294E226003F1784 /* ViewController.swift */; };
@@ -40,6 +41,7 @@
 		2EC461C1B133537BD2210919 /* Pods-Stockly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stockly.debug.xcconfig"; path = "Target Support Files/Pods-Stockly/Pods-Stockly.debug.xcconfig"; sourceTree = "<group>"; };
 		5717019E2295ECA000361B09 /* DataGetter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataGetter.swift; sourceTree = "<group>"; };
 		571701A22297254400361B09 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		571701A42297259E00361B09 /* Singleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
 		575BE6252294E39C00456C12 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		576022432294E226003F1784 /* Stockly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stockly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		576022462294E226003F1784 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				57F765E82295C93300431F79 /* Stock.swift */,
 				57F765EA2295C96400431F79 /* CurrentUser.swift */,
 				571701A22297254400361B09 /* Constants.swift */,
+				571701A42297259E00361B09 /* Singleton.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -355,6 +358,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				57F765E32295997800431F79 /* SignInViewController.swift in Sources */,
+				571701A52297259E00361B09 /* Singleton.swift in Sources */,
 				576022492294E226003F1784 /* ViewController.swift in Sources */,
 				5717019F2295ECA000361B09 /* DataGetter.swift in Sources */,
 				57F765D62294EB1B00431F79 /* Service.swift in Sources */,

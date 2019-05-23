@@ -21,7 +21,7 @@ class Service {
     static let designGrayColor = UIColor(r: 206, g: 214, b: 227)
     //design == most of the app should have these colors
     static let baseColor = UIColor.blue
-    static let darkBaseColor = UIColor.darkGray
+    static let darkBaseColor = UIColor(r: 0, g: 255, b: 173)
     static let lightBaseColor = UIColor.lightGray
     
     //user alerts
