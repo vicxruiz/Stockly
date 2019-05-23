@@ -2,10 +2,7 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x"
-    },
-    {
-      "idiom" : "universal",
+      "filename" : "Stock Chart.png",
       "scale" : "1x"
     },
     {
@@ -14,7 +11,6 @@
     },
     {
       "idiom" : "universal",
-      "filename" : "facebook-logo2.png",
       "scale" : "3x"
     }
   ],

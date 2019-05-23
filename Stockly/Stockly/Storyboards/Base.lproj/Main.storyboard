@@ -50,7 +50,7 @@
                     <navigationItem key="navigationItem" title="Search" id="rci-Xn-mSa"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <segue destination="i53-bk-VPh" kind="show" id="GoQ-Gl-I3Z"/>
+                        <segue destination="i53-bk-VPh" kind="show" identifier="searchStock" id="GoQ-Gl-I3Z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -228,7 +228,7 @@
             </objects>
             <point key="canvasLocation" x="1085.5072463768117" y="491.51785714285711"/>
         </scene>
-        <!--Results View Controller-->
+        <!--Stock Info-->
         <scene sceneID="jqg-cn-g39">
             <objects>
                 <viewController id="i53-bk-VPh" customClass="ResultsViewController" customModule="Bulls___Bears" customModuleProvider="target" sceneMemberID="viewController">
@@ -255,13 +255,13 @@
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Symbol" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MU9-Em-sBd">
                                                                 <rect key="frame" x="0.0" y="0.0" width="34" height="12"/>
                                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="10"/>
-                                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <color key="textColor" red="0.33694130179999998" green="0.3975068927" blue="0.4551184177" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="178.46" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a4B-0g-mRr">
                                                                 <rect key="frame" x="0.0" y="12" width="92" height="35"/>
                                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
-                                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <color key="textColor" red="0.33694130179999998" green="0.3975068927" blue="0.4551184177" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <stackView opaque="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="253" verticalHuggingPriority="253" horizontalCompressionResistancePriority="753" verticalCompressionResistancePriority="753" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="0d5-cM-zjV">
@@ -270,21 +270,21 @@
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(+1.21)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="88b-Ij-BcU">
                                                                         <rect key="frame" x="0.0" y="0.0" width="31" height="12"/>
                                                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="10"/>
-                                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <color key="textColor" red="0.33694130179999998" green="0.3975068927" blue="0.4551184177" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(+1.23%)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SnE-BO-rxK">
                                                                         <rect key="frame" x="31" y="0.0" width="41" height="12"/>
                                                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="10"/>
-                                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <color key="textColor" red="0.33694130179999998" green="0.3975068927" blue="0.4551184177" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                 </subviews>
                                                             </stackView>
                                                         </subviews>
                                                     </stackView>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="faN-G8-tpp">
-                                                        <rect key="frame" x="0.0" y="59" width="50" height="250"/>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" image="Screen Shot 2019-05-23 at 6.33.18 PM" translatesAutoresizingMaskIntoConstraints="NO" id="faN-G8-tpp">
+                                                        <rect key="frame" x="0.0" y="59" width="394" height="250"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="250" id="yZA-L2-IuV"/>
                                                         </constraints>
@@ -503,6 +503,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7z6-Nf-OiE"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Stock Info" id="RX8-q9-eEd">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="26O-xS-pXX">
+                            <color key="tintColor" red="0.48521250486373901" green="0.96038001775741577" blue="0.66571611166000366" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
                     <size key="freeformSize" width="414" height="1500"/>
                     <connections>
                         <outlet property="changeLabel" destination="88b-Ij-BcU" id="OJn-NJ-qde"/>
@@ -519,9 +524,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9QQ-lJ-OGi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3075" y="-585"/>
+            <point key="canvasLocation" x="3073.913043478261" y="-585.26785714285711"/>
         </scene>
-        <!--Stock Info-->
+        <!--Stats View Controller-->
         <scene sceneID="Sup-Pq-dCk">
             <objects>
                 <viewController id="1UJ-29-7gO" customClass="StatsViewController" customModule="Bulls___Bears" customModuleProvider="target" sceneMemberID="viewController">
@@ -895,7 +900,6 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hZB-RH-C3i"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Stock Info" id="ty6-Ku-cJv"/>
                     <size key="freeformSize" width="414" height="1830"/>
                     <connections>
                         <outlet property="askLabel" destination="2Ie-U5-kXi" id="JAS-rw-TP1"/>
@@ -948,6 +952,7 @@
     </scenes>
     <resources>
         <image name="Investing" width="567" height="448.5"/>
+        <image name="Screen Shot 2019-05-23 at 6.33.18 PM" width="1295" height="625"/>
         <image name="home" width="32" height="32"/>
         <image name="icons8-settings-50" width="25" height="25"/>
         <image name="report" width="512" height="512"/>

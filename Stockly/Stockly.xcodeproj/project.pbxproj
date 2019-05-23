@@ -10,6 +10,7 @@
 		5717019F2295ECA000361B09 /* DataGetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5717019E2295ECA000361B09 /* DataGetter.swift */; };
 		571701A32297254400361B09 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571701A22297254400361B09 /* Constants.swift */; };
 		571701A52297259E00361B09 /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571701A42297259E00361B09 /* Singleton.swift */; };
+		571701A7229757E100361B09 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571701A6229757E100361B09 /* TableViewCell.swift */; };
 		575BE6262294E39C00456C12 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 575BE6252294E39C00456C12 /* GoogleService-Info.plist */; };
 		576022472294E226003F1784 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576022462294E226003F1784 /* AppDelegate.swift */; };
 		576022492294E226003F1784 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576022482294E226003F1784 /* ViewController.swift */; };
@@ -42,6 +43,7 @@
 		5717019E2295ECA000361B09 /* DataGetter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataGetter.swift; sourceTree = "<group>"; };
 		571701A22297254400361B09 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		571701A42297259E00361B09 /* Singleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
+		571701A6229757E100361B09 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		575BE6252294E39C00456C12 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		576022432294E226003F1784 /* Stockly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stockly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		576022462294E226003F1784 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 		575BE6292294E40C00456C12 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				571701A6229757E100361B09 /* TableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -374,6 +377,7 @@
 				57F765D92295844A00431F79 /* LaunchScreenViewController.swift in Sources */,
 				57F765EB2295C96400431F79 /* CurrentUser.swift in Sources */,
 				571701A32297254400361B09 /* Constants.swift in Sources */,
+				571701A7229757E100361B09 /* TableViewCell.swift in Sources */,
 				57F765E92295C93300431F79 /* Stock.swift in Sources */,
 				57F765DF229586AD00431F79 /* WelcomeViewController.swift in Sources */,
 				57F765E722959BBB00431F79 /* HomeViewController.swift in Sources */,
