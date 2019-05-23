@@ -172,7 +172,9 @@ class WelcomeController: UIViewController {
             }
             print("Successfully saved user to database // facebook")
             self.hud.dismiss(animated: true)
-            self.performSegue(withIdentifier: "facebookLogin", sender: self)
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "MainTabBarController")
+            self.present(vc, animated: true, completion: nil)
         }
     }
     

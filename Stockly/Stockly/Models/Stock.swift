@@ -8,6 +8,30 @@
 
 import Foundation
 
-struct Stock: NSObject {
-    
+struct Root: Codable {
+    let feed: Feed
+}
+
+struct Feed: Codable {
+    let results: [Stock]
+}
+
+struct Stock: Codable {
+    let id: Int
+    let ticker: String
+    let data: Thresholds
+}
+
+struct Thresholds: Codable {
+    let actionThresholds: Feature
+}
+
+struct Feature: Codable {
+    let TA: Analysis
+}
+
+struct Analysis: Codable {
+    let sell: Int
+    let hold: Int
+    let buy: Int
 }

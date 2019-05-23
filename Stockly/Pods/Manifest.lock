@@ -1,4 +1,6 @@
 PODS:
+  - Alamofire (5.0.0-beta.6)
+  - DropDown (2.3.13)
   - FacebookCore (0.7.0):
     - FBSDKCoreKit (~> 5.0)
   - FacebookLogin (0.7.0):
@@ -94,6 +96,8 @@ PODS:
   - SwiftyJSON (5.0.0)
 
 DEPENDENCIES:
+  - Alamofire (~> 5.0.0-beta.5)
+  - DropDown
   - FacebookCore
   - FacebookLogin
   - Firebase/Auth
@@ -106,6 +110,8 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - DropDown
     - FacebookCore
     - FacebookLogin
     - FBSDKCoreKit
@@ -128,6 +134,8 @@ SPEC REPOS:
     - SwiftyJSON
 
 SPEC CHECKSUMS:
+  Alamofire: cd08a4402bd12cacd0c66f23fb12fec8d6b965e4
+  DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
   FacebookCore: 4eee98476cb37a485af5d337eb21f8cd5b3c7e6c
   FacebookLogin: 94cdad6850e86a2b04704dedfe7674a7af8148eb
   FBSDKCoreKit: ba361d4a9d4dc29ff218822b849b22d4f869c7bb
@@ -149,6 +157,6 @@ SPEC CHECKSUMS:
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: 788d6b896390d33cb5708eb0e03025444a1e988d
+PODFILE CHECKSUM: 195a1b3722b00893b1a0f8b03f829fcd3db9335e
 
 COCOAPODS: 1.6.0.beta.1
