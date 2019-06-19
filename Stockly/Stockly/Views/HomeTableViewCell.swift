@@ -28,7 +28,7 @@ class HomeTableViewCell: UITableViewCell {
             return
         }
         stockNameLabel.text = stock.companyName
-        stockPriceLabel.text = "\(stockPrice)"
+        stockPriceLabel.text = "$\(stockPrice)"
     }
     
 }
