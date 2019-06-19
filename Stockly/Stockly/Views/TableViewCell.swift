@@ -37,13 +37,6 @@ class TradeDataTableViewCell: UITableViewCell {
     
 }
 
-class ShareStatsTableViewCell: UITableViewCell {
-    
-    @IBOutlet weak var shareStatsKeyLabel: UILabel!
-    @IBOutlet weak var shareStatsValueLabel: UILabel!
-    
-}
-
 
 class FinancialsTableViewCell: UITableViewCell {
     

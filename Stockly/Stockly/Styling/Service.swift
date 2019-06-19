@@ -10,6 +10,9 @@ import Foundation
 import UIKit
 
 class Service {
+    
+    //Theme
+    static let stocklyDesignTheme = UIColor(r: 113, g: 232, b: 225, a: 1)
     //Navigation
     static let navigationBarTintColor = UIColor.blue
     

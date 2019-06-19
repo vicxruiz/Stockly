@@ -22,7 +22,7 @@ class MainTabBarController: UITabBarController {
     
     fileprivate func setupViewControllers() {
         tabBar.unselectedItemTintColor = Service.designGrayColor
-        tabBar.tintColor = Service.darkBaseColor
+        tabBar.tintColor = Service.stocklyDesignTheme
     }
     
 }
