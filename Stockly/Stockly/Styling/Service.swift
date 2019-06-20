@@ -4,7 +4,7 @@
 //
 //  Created by Victor  on 5/21/19.
 //  Copyright © 2019 com.Victor. All rights reserved.
-//
+//131843
 
 import Foundation
 import UIKit
@@ -13,6 +13,7 @@ class Service {
     
     //Theme
     static let stocklyDesignTheme = UIColor(r: 113, g: 232, b: 225, a: 1)
+    static let stocklySecondaryTheme = UIColor(r: 13, g: 18, b: 43, a: 1)
     //Navigation
     static let navigationBarTintColor = UIColor.blue
     

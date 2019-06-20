@@ -186,14 +186,14 @@ class WelcomeController: UIViewController {
             let backItem = UIBarButtonItem()
             backItem.title = "Back"
             navigationItem.backBarButtonItem = backItem
-            navigationItem.backBarButtonItem?.tintColor = Service.designGrayColor
+            navigationItem.backBarButtonItem?.tintColor = UIColor.white
         }
         
         if segue?.identifier == "signUp" {
             let backItem = UIBarButtonItem()
             backItem.title = "Back"
             navigationItem.backBarButtonItem = backItem
-            navigationItem.backBarButtonItem?.tintColor = Service.designGrayColor
+            navigationItem.backBarButtonItem?.tintColor = UIColor.white
         }
     }
 }

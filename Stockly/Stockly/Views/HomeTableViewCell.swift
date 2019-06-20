@@ -12,23 +12,38 @@ import UIKit
 class HomeTableViewCell: UITableViewCell {
     @IBOutlet weak var stockNameLabel: UILabel!
     @IBOutlet weak var stockPriceLabel: UILabel!
-    
+    @IBOutlet weak var stockSymbolLabel: UILabel!
+    @IBOutlet weak var stockChangeLabel: UILabel!
     var dataGetter: DataGetter?
-    var stock: Stock? {
+    
+    var stock: Batch? {
         didSet {
             updateViews()
         }
     }
     
-    
     func updateViews() {
-        guard let stock = stock, let stockPrice = stock.latestPrice else {
-            stockPriceLabel.text = "0"
-            print("No Stock in view cell")
+        stockChangeLabel.layer.masksToBounds = true
+        stockChangeLabel.layer.cornerRadius = 5
+        guard let stock = stock else {
+            print("no stock")
             return
         }
-        stockNameLabel.text = stock.companyName
-        stockPriceLabel.text = "$\(stockPrice)"
+        stockNameLabel.text = stock.quote.companyName
+        guard let stockLatestPrice = stock.quote.latestPrice else {
+            return
+        }
+        if let stockChangePerecntage = stock.quote.changePercent {
+            let roundedPercent = Double(round(1000 * stockChangePerecntage)/1000)
+           stockChangeLabel.text = "\(roundedPercent)%"
+        }
+        stockSymbolLabel.text = stock.quote.symbol
+        stockPriceLabel.text = "$\(stockLatestPrice)"
+        if "\(stock.quote.change)".contains("-") {
+            stockChangeLabel.textColor = UIColor.red
+        } else {
+            stockChangeLabel.textColor = UIColor.green
+        }
     }
     
 }

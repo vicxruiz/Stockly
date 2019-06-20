@@ -37,6 +37,30 @@ struct Sector: Equatable {
     }
 }
 
+struct TechRoot: Decodable {
+    let AAPL: Batch
+    let TSLA: Batch
+    let FB: Batch
+    let AMZN: Batch
+    let BABA: Batch
+}
+
+struct HealthRoot: Decodable {
+    let CELG: Batch
+    let TEVA: Batch
+    let ALXN: Batch
+    let ALGN: Batch
+    let ANTM: Batch
+}
+
+struct IndustrialRoot: Decodable {
+    let HEI: Batch
+    let DHR: Batch
+    let TDG: Batch
+    let ZBRA: Batch
+    let SWK: Batch
+}
+
 struct Batch: Decodable {
     let quote: Quote
     let news: [News]
@@ -67,7 +91,7 @@ struct Quote : Decodable {
 
 
 struct News: Decodable {
-    let datetime: String?
+    let datetime: Int?
     let headline: String?
     let source: String?
     let url: String?

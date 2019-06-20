@@ -13,7 +13,6 @@ class MainTabBarController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
         //checks logged in status of user
         self.tabBar.layer.borderWidth = 0
         self.tabBar.clipsToBounds = true
