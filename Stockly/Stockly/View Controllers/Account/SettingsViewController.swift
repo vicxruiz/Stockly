@@ -28,7 +28,7 @@ class SettingsViewController: UIViewController {
             do {
                 try Auth.auth().signOut()
                 let storyboard = UIStoryboard(name: "Onboarding", bundle: nil)
-                let vc = storyboard.instantiateViewController(withIdentifier: "OnboardingViewController") as! WelcomeController
+                let vc = storyboard.instantiateViewController(withIdentifier: "OnboardingViewController") as! OnboardingNavigationViewController
                 self.present(vc, animated: true, completion: nil)
             }
             catch let err {

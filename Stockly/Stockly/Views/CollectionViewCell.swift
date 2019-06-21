@@ -9,9 +9,6 @@
 import Foundation
 import UIKit
 
-class MarketNewsCollectionViewCell: UICollectionViewCell {
-    
-}
 
 class SymbolNewsCollectionViewCell: UICollectionViewCell {
     
@@ -19,10 +16,9 @@ class SymbolNewsCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var dateLabel: UILabel!
 }
 
-class StockTwitsCollectionViewCell: UICollectionViewCell {
-    
-    @IBOutlet weak var userNameLabel: UILabel!
-    @IBOutlet weak var messagesLabel: UILabel!
+class SearchNewsCollectionViewCell: UICollectionViewCell {
+    @IBOutlet weak var searchHeadLinesLabel: UILabel!
+    @IBOutlet weak var searchDateLabel: UILabel!
 }
 
 

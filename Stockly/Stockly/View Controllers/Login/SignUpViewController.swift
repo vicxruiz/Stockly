@@ -146,7 +146,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         }
         navigationController?.navigationBar.prefersLargeTitles = true
         signUpAccept.layer.masksToBounds = true
-        signUpAccept.layer.cornerRadius = 15
+        signUpAccept.layer.cornerRadius = 5
         self.hideKeyboardWhenTappedAround()
         //        usernameField.addTarget(self, action: #selector(editingChanged(_:)), for: .editingChanged)
     }

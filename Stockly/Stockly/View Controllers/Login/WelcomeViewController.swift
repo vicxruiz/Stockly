@@ -54,14 +54,14 @@ class WelcomeController: UIViewController {
     
     func updateButtonViews() {
         facebookButton.layer.masksToBounds = true
-        facebookButton.layer.cornerRadius = Service.buttonCornerRadius
+        facebookButton.layer.cornerRadius = 5
         facebookButton.setImage(#imageLiteral(resourceName: "facebook-logo2").withRenderingMode(.alwaysTemplate), for: .normal)
         facebookButton.tintColor = .white
         facebookButton.contentMode = .scaleAspectFit
         loginButton.layer.masksToBounds = true
-        loginButton.layer.cornerRadius = Service.buttonCornerRadius
+        loginButton.layer.cornerRadius = 5
         signUpButton.layer.masksToBounds = true
-        signUpButton.layer.cornerRadius = Service.buttonCornerRadius
+        signUpButton.layer.cornerRadius = 5
     }
     
     func updateNavBar() {

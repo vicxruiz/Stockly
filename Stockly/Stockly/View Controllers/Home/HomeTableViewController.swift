@@ -16,6 +16,7 @@ class HomeTableViewController: UITableViewController {
     let industrialStockController = IndustrialStockController()
     let stockController = StockController()
     let dataGetter = DataGetter()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchTechStocks()

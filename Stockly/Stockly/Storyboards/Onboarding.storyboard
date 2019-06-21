@@ -235,16 +235,8 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ivg-Gu-2yM"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Stockly" id="Miy-6e-XQS">
-                        <barButtonItem key="leftBarButtonItem" title="X" style="plain" id="IEJ-uu-bhY">
-                            <color key="tintColor" red="0.40814721580000002" green="0.46255367990000001" blue="0.57942390440000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <connections>
-                                <action selector="dismissButtonPressed:" destination="U5k-C2-jJG" id="uLz-iL-qnK"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Stockly" id="Miy-6e-XQS"/>
                     <connections>
-                        <outlet property="dismissScreenButton" destination="IEJ-uu-bhY" id="cT2-1L-3k7"/>
                         <outlet property="facebookButton" destination="d8a-2T-I23" id="Wrc-FN-noq"/>
                         <outlet property="loginButton" destination="lRy-KI-VFf" id="eYn-rf-zea"/>
                         <outlet property="signUpButton" destination="7ai-33-8rx" id="7R0-ms-qPO"/>
@@ -256,10 +248,10 @@
             </objects>
             <point key="canvasLocation" x="2392.753623188406" y="41.517857142857139"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Onboarding Navigation View Controller-->
         <scene sceneID="rOt-oX-as0">
             <objects>
-                <navigationController storyboardIdentifier="OnboardingViewController" automaticallyAdjustsScrollViewInsets="NO" id="RBA-iC-pt8" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="OnboardingViewController" automaticallyAdjustsScrollViewInsets="NO" id="RBA-iC-pt8" customClass="OnboardingNavigationViewController" customModule="Stockly" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="8NW-wj-tBh">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>

@@ -41,7 +41,6 @@ class HomeStockDetialViewController: UIViewController, UITableViewDelegate, UITa
         updateViews()
         getChartData()
         mChart.borderColor = .white
-    
     }
     
     func getChartData() {
@@ -191,6 +190,20 @@ class HomeStockDetialViewController: UIViewController, UITableViewDelegate, UITa
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "NewsDetail" {
+            guard let destinationVC = segue.destination as? StockNewsViewContorller else {return}
+            let cell = sender as! SymbolNewsCollectionViewCell
+            guard let indexPath = self.newsCollectionView.indexPath(for: cell) else {return}
+            let url = self.collectionViewData[(indexPath.row)].url
+            destinationVC.url = url
+        }
+        let backItem = UIBarButtonItem()
+        backItem.title = "Back"
+        navigationItem.backBarButtonItem = backItem
+        navigationItem.backBarButtonItem?.tintColor = .white
+        
+    }
 }
 
 
@@ -225,3 +238,4 @@ extension HomeStockDetialViewController: UICollectionViewDelegate, UICollectionV
     
     
 }
+

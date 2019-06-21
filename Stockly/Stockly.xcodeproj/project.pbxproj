@@ -11,7 +11,6 @@
 		571701A9229758CB00361B09 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571701A8229758CB00361B09 /* CollectionViewCell.swift */; };
 		571701AB22975A0400361B09 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571701AA22975A0400361B09 /* SearchViewController.swift */; };
 		571701AD22975E6800361B09 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571701AC22975E6800361B09 /* ResultsViewController.swift */; };
-		571701B022975EC900361B09 /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571701AF22975EC900361B09 /* StatsViewController.swift */; };
 		571701B42297710000361B09 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571701B32297710000361B09 /* SettingsViewController.swift */; };
 		5734E92322B84C540020BECA /* HomeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5734E92222B84C540020BECA /* HomeCollectionViewController.swift */; };
 		5734E92522B84EFB0020BECA /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5734E92422B84EFB0020BECA /* HomeCollectionViewCell.swift */; };
@@ -28,9 +27,14 @@
 		5760224C2294E226003F1784 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5760224A2294E226003F1784 /* Main.storyboard */; };
 		5760224E2294E22D003F1784 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5760224D2294E22D003F1784 /* Assets.xcassets */; };
 		576022512294E22D003F1784 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5760224F2294E22D003F1784 /* LaunchScreen.storyboard */; };
+		57811EF022BC62EA0000A046 /* StockSearchNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57811EEF22BC62EA0000A046 /* StockSearchNewsViewController.swift */; };
+		57811EF322BC7A420000A046 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57811EF222BC7A410000A046 /* ProfileTableViewController.swift */; };
+		57811EF522BC7E2A0000A046 /* UserStock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57811EF422BC7E2A0000A046 /* UserStock.swift */; };
 		57873DC422BAC64F00C4F311 /* TechStockController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57873DC322BAC64E00C4F311 /* TechStockController.swift */; };
 		57873DC622BAD5B100C4F311 /* HealthStockController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57873DC522BAD5B000C4F311 /* HealthStockController.swift */; };
 		57873DC822BAD5C300C4F311 /* IndustrialStockController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57873DC722BAD5C300C4F311 /* IndustrialStockController.swift */; };
+		57BA390622BC31A80067D651 /* StockNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BA390522BC31A80067D651 /* StockNewsViewController.swift */; };
+		57BA390822BC498B0067D651 /* OnboardingNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BA390722BC498B0067D651 /* OnboardingNavigationViewController.swift */; };
 		57F765C62294E66000431F79 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 57F765C52294E66000431F79 /* Default-568h@2x.png */; };
 		57F765D62294EB1B00431F79 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F765D52294EB1B00431F79 /* Service.swift */; };
 		57F765D92295844A00431F79 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F765D82295844A00431F79 /* LaunchScreenViewController.swift */; };
@@ -50,7 +54,6 @@
 		571701A8229758CB00361B09 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		571701AA22975A0400361B09 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		571701AC22975E6800361B09 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
-		571701AF22975EC900361B09 /* StatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewController.swift; sourceTree = "<group>"; };
 		571701B32297710000361B09 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		5734E92222B84C540020BECA /* HomeCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewController.swift; sourceTree = "<group>"; };
 		5734E92422B84EFB0020BECA /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -69,9 +72,14 @@
 		5760224D2294E22D003F1784 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		576022502294E22D003F1784 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		576022522294E22D003F1784 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57811EEF22BC62EA0000A046 /* StockSearchNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockSearchNewsViewController.swift; sourceTree = "<group>"; };
+		57811EF222BC7A410000A046 /* ProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
+		57811EF422BC7E2A0000A046 /* UserStock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStock.swift; sourceTree = "<group>"; };
 		57873DC322BAC64E00C4F311 /* TechStockController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechStockController.swift; sourceTree = "<group>"; };
 		57873DC522BAD5B000C4F311 /* HealthStockController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthStockController.swift; sourceTree = "<group>"; };
 		57873DC722BAD5C300C4F311 /* IndustrialStockController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndustrialStockController.swift; sourceTree = "<group>"; };
+		57BA390522BC31A80067D651 /* StockNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockNewsViewController.swift; sourceTree = "<group>"; };
+		57BA390722BC498B0067D651 /* OnboardingNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingNavigationViewController.swift; sourceTree = "<group>"; };
 		57F765C52294E66000431F79 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		57F765D52294EB1B00431F79 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		57F765D82295844A00431F79 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
@@ -113,6 +121,7 @@
 				5734E92222B84C540020BECA /* HomeCollectionViewController.swift */,
 				5734E92822B860530020BECA /* SectorCollectionViewCellDelegate.swift */,
 				5734E92A22B988830020BECA /* HomeStockDetailViewController.swift */,
+				57BA390522BC31A80067D651 /* StockNewsViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -148,7 +157,7 @@
 			children = (
 				571701AA22975A0400361B09 /* SearchViewController.swift */,
 				571701AC22975E6800361B09 /* ResultsViewController.swift */,
-				571701AF22975EC900361B09 /* StatsViewController.swift */,
+				57811EEF22BC62EA0000A046 /* StockSearchNewsViewController.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -158,6 +167,7 @@
 			children = (
 				57F765D82295844A00431F79 /* LaunchScreenViewController.swift */,
 				57F765DA2295848700431F79 /* MainTabBarController.swift */,
+				57BA390722BC498B0067D651 /* OnboardingNavigationViewController.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -179,6 +189,7 @@
 			children = (
 				57F765EA2295C96400431F79 /* CurrentUser.swift */,
 				574C846222B2EA5200390342 /* Collection.swift */,
+				57811EF422BC7E2A0000A046 /* UserStock.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -197,6 +208,7 @@
 		575BE62A2294E41B00456C12 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				57811EF122BC7A2D0000A046 /* New Group */,
 				574516E822B19254000F8118 /* Home */,
 				575A1EF02297770A00EB40F6 /* Navigation */,
 				575A1EEF229776CE00EB40F6 /* Search */,
@@ -268,6 +280,14 @@
 				57873DC722BAD5C300C4F311 /* IndustrialStockController.swift */,
 			);
 			path = "Model Controllers";
+			sourceTree = "<group>";
+		};
+		57811EF122BC7A2D0000A046 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				57811EF222BC7A410000A046 /* ProfileTableViewController.swift */,
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		6B90094933674CD237A1EA42 /* Pods */ = {
@@ -434,13 +454,17 @@
 				571701A9229758CB00361B09 /* CollectionViewCell.swift in Sources */,
 				5734E92322B84C540020BECA /* HomeCollectionViewController.swift in Sources */,
 				5734E92722B85BE50020BECA /* SectorController.swift in Sources */,
-				571701B022975EC900361B09 /* StatsViewController.swift in Sources */,
 				57873DC422BAC64F00C4F311 /* TechStockController.swift in Sources */,
+				57BA390622BC31A80067D651 /* StockNewsViewController.swift in Sources */,
+				57811EF022BC62EA0000A046 /* StockSearchNewsViewController.swift in Sources */,
 				576022472294E226003F1784 /* AppDelegate.swift in Sources */,
 				574C846322B2EA5200390342 /* Collection.swift in Sources */,
+				57811EF522BC7E2A0000A046 /* UserStock.swift in Sources */,
+				57BA390822BC498B0067D651 /* OnboardingNavigationViewController.swift in Sources */,
 				57F765E52295998F00431F79 /* SignUpViewController.swift in Sources */,
 				57F765DB2295848700431F79 /* MainTabBarController.swift in Sources */,
 				574516EC22B192D9000F8118 /* HomeTableViewCell.swift in Sources */,
+				57811EF322BC7A420000A046 /* ProfileTableViewController.swift in Sources */,
 				57873DC622BAD5B100C4F311 /* HealthStockController.swift in Sources */,
 				57F765D92295844A00431F79 /* LaunchScreenViewController.swift in Sources */,
 				57F765EB2295C96400431F79 /* CurrentUser.swift in Sources */,
