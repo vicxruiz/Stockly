@@ -50,7 +50,11 @@ class ResultsViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     @IBAction func saveButtonPressed() {
-        
+        guard let key = ref.childByAutoId().key else {return}
+        guard let quote = stockController?.quote else {return}
+        let object = ["stock symbol": quote.symbol, "stock name": quote.companyName, "stock percent": "\(quote.changePercent ?? 0.0)", "stock price": "\(quote.latestPrice ?? 0.0)", "id": key]
+        ref.child(key).setValue(object)
+        Service.showAlert(on: self, style: .alert, title: "Stock Saved!", message: "Successfully added \(quote.companyName) to watchlist")
     }
     
     private func getChartData() {

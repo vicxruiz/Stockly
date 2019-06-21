@@ -173,9 +173,6 @@
                             <outlet property="delegate" destination="z9V-zC-cqp" id="uT0-jU-nWx"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="" image="fire (1)" id="BmP-Al-AZY">
-                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
-                    </tabBarItem>
                     <navigationItem key="navigationItem" title="Trending" id="2XH-3m-b0g"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
@@ -876,7 +873,7 @@
         <scene sceneID="lJd-sx-Kyc">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zJu-MZ-slz" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" id="S0x-Nq-E6T"/>
+                    <tabBarItem key="tabBarItem" title="" image="fire (1)" id="S0x-Nq-E6T"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZSM-SH-EHN">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -1234,7 +1231,7 @@
         <!--Profile-->
         <scene sceneID="BhJ-Sf-W7v">
             <objects>
-                <tableViewController id="oOu-Eo-aLO" sceneMemberID="viewController">
+                <tableViewController id="oOu-Eo-aLO" customClass="ProfileTableViewController" customModule="Stockly" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Bxq-gW-ngn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1257,7 +1254,7 @@
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="StockCollectionCell" rowHeight="85" id="pxf-TZ-tY5" customClass="HomeTableViewCell" customModule="Stockly" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="WatchListCell" rowHeight="85" id="pxf-TZ-tY5" customClass="WatchListTableViewCell" customModule="Stockly" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="227" width="414" height="85"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pxf-TZ-tY5" id="hgZ-fN-9aO">
@@ -1309,6 +1306,12 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.050980392159999999" green="0.070588235289999995" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="latestPriceLabel" destination="o4F-fM-yBa" id="tFY-JI-c0e"/>
+                                    <outlet property="nameLabel" destination="OI3-lc-Fpf" id="RVJ-Ha-fbe"/>
+                                    <outlet property="percentLabel" destination="sXg-Tc-UtE" id="jK7-Ut-y87"/>
+                                    <outlet property="symbolLabel" destination="UBm-Cp-SJ0" id="8EW-jS-hKL"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <sections/>
@@ -1317,24 +1320,25 @@
                             <outlet property="delegate" destination="oOu-Eo-aLO" id="qyH-Ey-zXY"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="" image="home" id="DEq-n1-UDQ">
-                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
-                    </tabBarItem>
-                    <navigationItem key="navigationItem" title="Profile" id="ReC-Pq-xBo"/>
+                    <navigationItem key="navigationItem" title="Profile" id="ReC-Pq-xBo">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="icons8-settings-50" id="etE-i1-Ie1">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="ZPi-A3-6ki" kind="presentation" id="UI1-wG-tyH"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <segue destination="ZPi-A3-6ki" kind="presentation" id="yxn-cb-2Mj"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="upW-et-Zh2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1303" y="1355"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="P04-ua-bF3">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="v4t-uM-qV1" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="YtW-5I-6ri"/>
+                    <tabBarItem key="tabBarItem" title="" image="magnifying-glass" id="YtW-5I-6ri"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zJz-AU-Gj8">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -1376,9 +1380,6 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="BtO-ng-uie"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="magnifying-glass" id="TJk-7n-c1z">
-                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
-                    </tabBarItem>
                     <navigationItem key="navigationItem" id="itR-IK-oOr"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -1393,7 +1394,7 @@
         <scene sceneID="gKk-Yu-mDf">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ei7-GV-3cs" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="fire (1)" id="lkQ-tA-icu">
+                    <tabBarItem key="tabBarItem" title="" image="home" id="lkQ-tA-icu">
                         <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
                     </tabBarItem>
                     <toolbarItems/>
@@ -1689,6 +1690,9 @@
                     <navigationItem key="navigationItem" title="Hello" id="m6p-dz-EqZ">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="auC-r6-dZC">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="saveButtonPressed" destination="LIV-hK-cTh" id="mcs-Ux-6Ss"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <size key="freeformSize" width="414" height="1500"/>
@@ -1726,6 +1730,7 @@
         <image name="drawkit-charts-and-graphs-800px" width="800" height="800"/>
         <image name="fire (1)" width="32" height="32"/>
         <image name="home" width="32" height="32"/>
+        <image name="icons8-settings-50" width="25" height="25"/>
         <image name="magnifying-glass" width="32" height="32"/>
         <image name="research" width="512" height="512"/>
         <image name="search (1)" width="32" height="32"/>

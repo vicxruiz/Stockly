@@ -30,6 +30,7 @@
 		57811EF022BC62EA0000A046 /* StockSearchNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57811EEF22BC62EA0000A046 /* StockSearchNewsViewController.swift */; };
 		57811EF322BC7A420000A046 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57811EF222BC7A410000A046 /* ProfileTableViewController.swift */; };
 		57811EF522BC7E2A0000A046 /* UserStock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57811EF422BC7E2A0000A046 /* UserStock.swift */; };
+		57811EF722BC85360000A046 /* WatchListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57811EF622BC85360000A046 /* WatchListTableViewCell.swift */; };
 		57873DC422BAC64F00C4F311 /* TechStockController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57873DC322BAC64E00C4F311 /* TechStockController.swift */; };
 		57873DC622BAD5B100C4F311 /* HealthStockController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57873DC522BAD5B000C4F311 /* HealthStockController.swift */; };
 		57873DC822BAD5C300C4F311 /* IndustrialStockController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57873DC722BAD5C300C4F311 /* IndustrialStockController.swift */; };
@@ -75,6 +76,7 @@
 		57811EEF22BC62EA0000A046 /* StockSearchNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockSearchNewsViewController.swift; sourceTree = "<group>"; };
 		57811EF222BC7A410000A046 /* ProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
 		57811EF422BC7E2A0000A046 /* UserStock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStock.swift; sourceTree = "<group>"; };
+		57811EF622BC85360000A046 /* WatchListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchListTableViewCell.swift; sourceTree = "<group>"; };
 		57873DC322BAC64E00C4F311 /* TechStockController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechStockController.swift; sourceTree = "<group>"; };
 		57873DC522BAD5B000C4F311 /* HealthStockController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthStockController.swift; sourceTree = "<group>"; };
 		57873DC722BAD5C300C4F311 /* IndustrialStockController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndustrialStockController.swift; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 				571701A6229757E100361B09 /* TableViewCell.swift */,
 				571701A8229758CB00361B09 /* CollectionViewCell.swift */,
 				574516EB22B192D9000F8118 /* HomeTableViewCell.swift */,
+				57811EF622BC85360000A046 /* WatchListTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -467,6 +470,7 @@
 				57811EF322BC7A420000A046 /* ProfileTableViewController.swift in Sources */,
 				57873DC622BAD5B100C4F311 /* HealthStockController.swift in Sources */,
 				57F765D92295844A00431F79 /* LaunchScreenViewController.swift in Sources */,
+				57811EF722BC85360000A046 /* WatchListTableViewCell.swift in Sources */,
 				57F765EB2295C96400431F79 /* CurrentUser.swift in Sources */,
 				571701AD22975E6800361B09 /* ResultsViewController.swift in Sources */,
 				571701AB22975A0400361B09 /* SearchViewController.swift in Sources */,

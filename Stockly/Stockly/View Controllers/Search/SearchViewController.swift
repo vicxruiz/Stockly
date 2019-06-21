@@ -60,9 +60,18 @@ extension SearchViewController: UISearchBarDelegate {
     
     func makeBatchRequest() {
         stockController.fetchStock(enteredSymbol) { (error) in
+        
+            var noValidStock = false
+            if self.stockController.quote?.companyName == nil {
+                noValidStock = true
+            }
             DispatchQueue.main.async {
                 if let error = error {
                     print(error)
+                }
+                if noValidStock {
+                    Service.showAlert(on: self, style: .alert, title: "Search Error", message: "Please Provide Valid Symbol")
+                    return
                 }
                 self.performSegue(withIdentifier: "SearchStock", sender: self)
                 print("done")

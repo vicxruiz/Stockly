@@ -18,8 +18,6 @@ class KeyDataTableViewCell: UITableViewCell {
 class SearchKeyDataTableViewCell: UITableViewCell {
     @IBOutlet weak var keyDataKeyLabel: UILabel!
     @IBOutlet weak var keyDataValueLabel: UILabel!
+    
+    
 }
-
-
-
-
