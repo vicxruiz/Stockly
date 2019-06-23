@@ -941,10 +941,10 @@
                                                 </subviews>
                                             </stackView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ytW-c6-b6m" userLabel="Table View Container">
-                                                <rect key="frame" x="10" y="390.5" width="394" height="449.5"/>
+                                                <rect key="frame" x="10" y="448" width="394" height="392"/>
                                                 <subviews>
                                                     <tableView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="t2C-Sb-nhj">
-                                                        <rect key="frame" x="1" y="30" width="392" height="418.5"/>
+                                                        <rect key="frame" x="1" y="30" width="392" height="361"/>
                                                         <color key="backgroundColor" red="0.050980392159999999" green="0.070588235289999995" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <color key="separatorColor" red="0.050980392159999999" green="0.070588235289999995" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <prototypes>
@@ -1112,26 +1112,39 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N6c-pU-erp" customClass="LineChartView" customModule="Charts">
-                                                <rect key="frame" x="10" y="123" width="394" height="229"/>
+                                                <rect key="frame" x="10" y="180.5" width="394" height="229"/>
                                                 <color key="backgroundColor" red="0.050980392159999999" green="0.070588235289999995" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="394" id="WIb-Rp-QWB"/>
                                                     <constraint firstAttribute="height" constant="229" id="lDe-5f-v0U"/>
                                                 </constraints>
                                             </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9PI-R6-NMP">
+                                                <rect key="frame" x="152" y="120" width="110" height="30"/>
+                                                <color key="backgroundColor" red="0.35294117650000001" green="0.8980392157" blue="0.86666666670000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Analyze">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="mqW-1K-b88" kind="show" identifier="SearchAnalyze" id="hUQ-4F-0ZF"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.050980392159999999" green="0.070588235289999995" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="5VT-Fy-TTA" firstAttribute="leading" secondItem="xyl-eo-6KV" secondAttribute="leading" constant="10" id="Bcs-o1-Hk1"/>
+                                            <constraint firstItem="9PI-R6-NMP" firstAttribute="top" secondItem="IjE-t9-SKw" secondAttribute="bottom" constant="29.5" id="DWS-UP-V8Y"/>
                                             <constraint firstItem="Cz4-Mj-qra" firstAttribute="leading" secondItem="xyl-eo-6KV" secondAttribute="leading" constant="10" id="EcE-OW-XRl"/>
                                             <constraint firstAttribute="trailing" secondItem="1TL-YH-lh9" secondAttribute="trailing" constant="10" id="I05-YR-bJt"/>
                                             <constraint firstItem="5VT-Fy-TTA" firstAttribute="top" secondItem="xyl-eo-6KV" secondAttribute="top" constant="20" id="KGr-rw-5Pa"/>
                                             <constraint firstItem="N6c-pU-erp" firstAttribute="centerX" secondItem="xyl-eo-6KV" secondAttribute="centerX" id="KfG-hT-aVT"/>
-                                            <constraint firstItem="N6c-pU-erp" firstAttribute="top" secondItem="5VT-Fy-TTA" secondAttribute="bottom" constant="32.5" id="Lmw-3K-EJy"/>
                                             <constraint firstAttribute="bottom" secondItem="1TL-YH-lh9" secondAttribute="bottom" constant="20" id="MLV-0V-QF8"/>
                                             <constraint firstItem="1TL-YH-lh9" firstAttribute="leading" secondItem="xyl-eo-6KV" secondAttribute="leading" constant="10" id="OuN-1N-kcK"/>
+                                            <constraint firstAttribute="trailing" secondItem="9PI-R6-NMP" secondAttribute="trailing" constant="152" id="Soa-bs-X9H"/>
+                                            <constraint firstItem="N6c-pU-erp" firstAttribute="top" secondItem="9PI-R6-NMP" secondAttribute="bottom" constant="30.5" id="bl3-DJ-S2H"/>
                                             <constraint firstAttribute="height" constant="1500" id="cQk-l7-1ul"/>
                                             <constraint firstAttribute="trailing" secondItem="5VT-Fy-TTA" secondAttribute="trailing" constant="10" id="dB9-Eh-mca"/>
+                                            <constraint firstItem="9PI-R6-NMP" firstAttribute="leading" secondItem="xyl-eo-6KV" secondAttribute="leading" constant="152" id="e4I-ll-kKZ"/>
                                             <constraint firstItem="dK5-Gu-k9Z" firstAttribute="leading" secondItem="xyl-eo-6KV" secondAttribute="leading" constant="10" id="gr0-IN-qnO"/>
                                             <constraint firstItem="ytW-c6-b6m" firstAttribute="top" secondItem="N6c-pU-erp" secondAttribute="bottom" constant="38.5" id="hoQ-H9-JuI"/>
                                             <constraint firstItem="dK5-Gu-k9Z" firstAttribute="top" secondItem="ytW-c6-b6m" secondAttribute="bottom" id="jA5-6f-Y8Y"/>
@@ -1167,10 +1180,14 @@
                     <navigationItem key="navigationItem" title="Info" id="HDh-oN-4Vy">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="RF3-vk-MKX">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="saveButtonPressed:" destination="vrH-Zb-Tfz" id="f1I-CQ-Hnv"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <size key="freeformSize" width="414" height="1500"/>
                     <connections>
+                        <outlet property="analyzeButton" destination="9PI-R6-NMP" id="2PJ-6j-tK7"/>
                         <outlet property="changePercentLabel" destination="IjE-t9-SKw" id="Uha-zF-kbW"/>
                         <outlet property="keyDataTableView" destination="t2C-Sb-nhj" id="h5g-Ur-92D"/>
                         <outlet property="latestPriceLabel" destination="rUQ-1O-9Ag" id="RwT-mP-r1K"/>
@@ -1180,7 +1197,37 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M3p-JL-EGN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2291" y="-1173"/>
+            <point key="canvasLocation" x="2289.8550724637685" y="-1173.2142857142856"/>
+        </scene>
+        <!--Analyze View Controller-->
+        <scene sceneID="XVg-cL-b0N">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KnL-vn-V9N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="mqW-1K-b88" customClass="AnalyzeViewController" customModule="Stockly" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cSL-Qn-TQI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fTi-7M-O6w" customClass="PieChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.050980392159999999" green="0.070588235289999995" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fTi-7M-O6w" firstAttribute="trailing" secondItem="eov-Y5-jiB" secondAttribute="trailing" id="0GB-hf-k5Y"/>
+                            <constraint firstItem="fTi-7M-O6w" firstAttribute="top" secondItem="eov-Y5-jiB" secondAttribute="top" id="1fc-05-R5e"/>
+                            <constraint firstItem="fTi-7M-O6w" firstAttribute="bottom" secondItem="eov-Y5-jiB" secondAttribute="bottom" id="LhL-aE-uGl"/>
+                            <constraint firstItem="fTi-7M-O6w" firstAttribute="leading" secondItem="eov-Y5-jiB" secondAttribute="leading" id="oer-eo-iBp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="eov-Y5-jiB"/>
+                    </view>
+                    <connections>
+                        <outlet property="pieChart" destination="fTi-7M-O6w" id="afI-fE-JNo"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="4231.884057971015" y="-1740.4017857142856"/>
         </scene>
         <!--Stock News View Contorller-->
         <scene sceneID="KJX-DT-KLk">
@@ -1195,7 +1242,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UxO-1K-EVU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3319" y="-1173"/>
+            <point key="canvasLocation" x="4233" y="-822"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="ocX-R7-xhE">
@@ -1464,10 +1511,10 @@
                                                 </subviews>
                                             </stackView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7l7-3H-W8w" userLabel="Table View Container">
-                                                <rect key="frame" x="10" y="390.5" width="394" height="449.5"/>
+                                                <rect key="frame" x="10" y="448" width="394" height="392"/>
                                                 <subviews>
                                                     <tableView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Scj-Bh-T4c">
-                                                        <rect key="frame" x="1" y="30" width="392" height="418.5"/>
+                                                        <rect key="frame" x="1" y="30" width="392" height="361"/>
                                                         <color key="backgroundColor" red="0.050980392159999999" green="0.070588235289999995" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <color key="separatorColor" red="0.050980392159999999" green="0.070588235289999995" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <prototypes>
@@ -1635,18 +1682,29 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rDu-H7-IQI" customClass="LineChartView" customModule="Charts">
-                                                <rect key="frame" x="10" y="123" width="394" height="229"/>
+                                                <rect key="frame" x="10" y="180.5" width="394" height="229"/>
                                                 <color key="backgroundColor" red="0.050980392159999999" green="0.070588235289999995" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="229" id="GF0-a9-lAr"/>
                                                     <constraint firstAttribute="width" constant="394" id="JPA-oJ-1zA"/>
                                                 </constraints>
                                             </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dRk-Dm-ehI">
+                                                <rect key="frame" x="152" y="115" width="110" height="30"/>
+                                                <color key="backgroundColor" red="0.35294117650000001" green="0.8980392157" blue="0.86666666670000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Analyze">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="taU-Fy-lDg" kind="show" identifier="SearchAnalyze" id="vzZ-m5-bR0"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.050980392159999999" green="0.070588235289999995" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="6nt-Mm-JcF" firstAttribute="top" secondItem="8re-Jm-oLx" secondAttribute="bottom" constant="1" id="4CQ-5M-fas"/>
                                             <constraint firstItem="4UT-Cv-3nH" firstAttribute="leading" secondItem="2G3-gm-j5I" secondAttribute="leading" constant="10" id="4Iu-tM-sKr"/>
+                                            <constraint firstItem="dRk-Dm-ehI" firstAttribute="top" secondItem="Vvi-Cx-qwE" secondAttribute="bottom" constant="24.5" id="774-iO-l8B"/>
                                             <constraint firstItem="qd8-O2-CAL" firstAttribute="leading" secondItem="2G3-gm-j5I" secondAttribute="leading" constant="10" id="8cS-zS-zn5"/>
                                             <constraint firstAttribute="bottom" secondItem="6nt-Mm-JcF" secondAttribute="bottom" constant="20" id="8wM-3N-qXo"/>
                                             <constraint firstItem="Rs4-tc-Kub" firstAttribute="top" secondItem="2G3-gm-j5I" secondAttribute="top" constant="20" id="9pj-1p-MBe"/>
@@ -1654,12 +1712,14 @@
                                             <constraint firstItem="7l7-3H-W8w" firstAttribute="top" secondItem="rDu-H7-IQI" secondAttribute="bottom" constant="38.5" id="Dg5-5p-VPB"/>
                                             <constraint firstAttribute="trailing" secondItem="4UT-Cv-3nH" secondAttribute="trailing" constant="10" id="Dx0-nU-7hI"/>
                                             <constraint firstAttribute="trailing" secondItem="6nt-Mm-JcF" secondAttribute="trailing" constant="10" id="GkJ-T9-jdm"/>
-                                            <constraint firstItem="rDu-H7-IQI" firstAttribute="top" secondItem="Rs4-tc-Kub" secondAttribute="bottom" constant="32.5" id="Hrm-KX-xwe"/>
                                             <constraint firstItem="4UT-Cv-3nH" firstAttribute="top" secondItem="qd8-O2-CAL" secondAttribute="bottom" constant="50" id="JIb-68-zmv"/>
+                                            <constraint firstItem="dRk-Dm-ehI" firstAttribute="leading" secondItem="2G3-gm-j5I" secondAttribute="leading" constant="152" id="Vha-7p-mlK"/>
                                             <constraint firstAttribute="height" constant="1500" id="VxZ-Nn-sBY"/>
                                             <constraint firstItem="8re-Jm-oLx" firstAttribute="leading" secondItem="2G3-gm-j5I" secondAttribute="leading" constant="10" id="XrA-B7-9oF"/>
+                                            <constraint firstItem="rDu-H7-IQI" firstAttribute="top" secondItem="dRk-Dm-ehI" secondAttribute="bottom" constant="35.5" id="aGw-m5-LDx"/>
                                             <constraint firstItem="8re-Jm-oLx" firstAttribute="top" secondItem="4UT-Cv-3nH" secondAttribute="bottom" id="cKi-bs-XKJ"/>
                                             <constraint firstItem="Rs4-tc-Kub" firstAttribute="leading" secondItem="2G3-gm-j5I" secondAttribute="leading" constant="10" id="cLU-oj-80F"/>
+                                            <constraint firstAttribute="trailing" secondItem="dRk-Dm-ehI" secondAttribute="trailing" constant="152" id="gVo-Eh-fQh"/>
                                             <constraint firstItem="qd8-O2-CAL" firstAttribute="top" secondItem="7l7-3H-W8w" secondAttribute="bottom" id="gmU-3D-TmE"/>
                                             <constraint firstItem="7l7-3H-W8w" firstAttribute="leading" secondItem="2G3-gm-j5I" secondAttribute="leading" constant="10" id="ima-L8-VPF"/>
                                             <constraint firstAttribute="trailing" secondItem="7l7-3H-W8w" secondAttribute="trailing" constant="10" id="mpj-Ty-TNM"/>
@@ -1697,6 +1757,7 @@
                     </navigationItem>
                     <size key="freeformSize" width="414" height="1500"/>
                     <connections>
+                        <outlet property="analyzeButton" destination="dRk-Dm-ehI" id="S4t-II-DRF"/>
                         <outlet property="keyDataTableView" destination="Scj-Bh-T4c" id="aXs-eV-mi3"/>
                         <outlet property="mChart" destination="rDu-H7-IQI" id="Rib-Tj-0Zs"/>
                         <outlet property="newsCollectionView" destination="VOH-z0-lwh" id="HFH-fN-iDR"/>
@@ -1721,7 +1782,37 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gkg-Jp-0Hs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3225" y="134"/>
+            <point key="canvasLocation" x="3225" y="468"/>
+        </scene>
+        <!--Search Analyze View Controller-->
+        <scene sceneID="TuC-UA-v00">
+            <objects>
+                <viewController id="taU-Fy-lDg" customClass="SearchAnalyzeViewController" customModule="Stockly" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eYj-gt-TLT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DK5-di-8Hm" customClass="PieChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.050980392159999999" green="0.070588235289999995" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="DK5-di-8Hm" firstAttribute="trailing" secondItem="1Sb-9V-lay" secondAttribute="trailing" id="L7x-zp-AFt"/>
+                            <constraint firstItem="DK5-di-8Hm" firstAttribute="leading" secondItem="1Sb-9V-lay" secondAttribute="leading" id="UbE-ew-Rc4"/>
+                            <constraint firstItem="DK5-di-8Hm" firstAttribute="top" secondItem="1Sb-9V-lay" secondAttribute="top" id="cT9-aw-w1x"/>
+                            <constraint firstItem="DK5-di-8Hm" firstAttribute="bottom" secondItem="1Sb-9V-lay" secondAttribute="bottom" id="zi9-wx-34M"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1Sb-9V-lay"/>
+                    </view>
+                    <connections>
+                        <outlet property="pieChart" destination="DK5-di-8Hm" id="jA8-2d-Ife"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L42-5d-fw0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3224.6376811594205" y="-303.34821428571428"/>
         </scene>
     </scenes>
     <resources>

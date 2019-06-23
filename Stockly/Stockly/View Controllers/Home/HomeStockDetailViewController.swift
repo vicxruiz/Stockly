@@ -9,6 +9,9 @@
 import Foundation
 import UIKit
 import Charts
+import FirebaseStorage
+import FirebaseDatabase
+import FirebaseAuth
 
 class HomeStockDetialViewController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
 
@@ -17,6 +20,7 @@ class HomeStockDetialViewController: UIViewController, UITableViewDelegate, UITa
     var healthStockController: HealthStockController?
     var industrialStockController: IndustrialStockController?
     var stock: Batch?
+    var ref: DatabaseReference!
     var keyDataTableKeys = [
         "Previous Close", "Open", "Low", "High",
         "52 Week Low", "52 Week High", "Volume",
@@ -31,9 +35,15 @@ class HomeStockDetialViewController: UIViewController, UITableViewDelegate, UITa
     @IBOutlet weak var changePercentLabel: UILabel!
     @IBOutlet weak var newsCollectionView: UICollectionView!
     @IBOutlet weak var mChart: LineChartView!
+    @IBOutlet weak var analyzeButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        guard let uid = Auth.auth().currentUser?.uid else {return}
+        
+        ref = Database.database().reference().child("users").child(uid).child("WatchList")
+        analyzeButton.layer.masksToBounds = true
+        analyzeButton.layer.cornerRadius = 5
         keyDataTableView.delegate = self
         keyDataTableView.dataSource = self
         newsCollectionView.delegate = self
@@ -41,6 +51,14 @@ class HomeStockDetialViewController: UIViewController, UITableViewDelegate, UITa
         updateViews()
         getChartData()
         mChart.borderColor = .white
+    }
+    
+    @IBAction func saveButtonPressed(_ sender: Any) {
+        guard let key = ref.childByAutoId().key else {return}
+        guard let quote = stockController?.quote else {return}
+        let object = ["stock symbol": quote.symbol, "stock name": quote.companyName, "stock percent": "\(quote.changePercent ?? 0.0)", "stock price": "\(quote.latestPrice ?? 0.0)", "id": key]
+        ref.child(key).setValue(object)
+        Service.showAlert(on: self, style: .alert, title: "Stock Saved!", message: "Successfully added \(quote.companyName) to watchlist")
     }
     
     func getChartData() {

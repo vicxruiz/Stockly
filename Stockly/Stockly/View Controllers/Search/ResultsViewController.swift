@@ -25,6 +25,7 @@ class ResultsViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet weak var stockPriceLabel: UILabel!
     @IBOutlet weak var stockPercentageLabel: UILabel!
     @IBOutlet weak var saveButton: UIButton!
+    @IBOutlet weak var analyzeButton: UIButton!
     
     var keyDataTableData: [String] = []
     var keyDataTableKeys = [
@@ -38,6 +39,8 @@ class ResultsViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        analyzeButton.layer.masksToBounds = true
+        analyzeButton.layer.cornerRadius = 5
         keyDataTableView.delegate = self
         keyDataTableView.dataSource = self
         newsCollectionView.delegate = self
@@ -49,7 +52,7 @@ class ResultsViewController: UIViewController, UITableViewDelegate, UITableViewD
         ref = Database.database().reference().child("users").child(uid).child("WatchList")
     }
     
-    @IBAction func saveButtonPressed() {
+    @IBAction func saveButtonPressed(_ sender: Any) {
         guard let key = ref.childByAutoId().key else {return}
         guard let quote = stockController?.quote else {return}
         let object = ["stock symbol": quote.symbol, "stock name": quote.companyName, "stock percent": "\(quote.changePercent ?? 0.0)", "stock price": "\(quote.latestPrice ?? 0.0)", "id": key]
