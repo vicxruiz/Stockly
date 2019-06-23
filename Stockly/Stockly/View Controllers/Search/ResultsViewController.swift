@@ -52,7 +52,7 @@ class ResultsViewController: UIViewController, UITableViewDelegate, UITableViewD
         ref = Database.database().reference().child("users").child(uid).child("WatchList")
     }
     
-    @IBAction func saveButtonPressed(_ sender: Any) {
+    @IBAction func saveButtonPressed() {
         guard let key = ref.childByAutoId().key else {return}
         guard let quote = stockController?.quote else {return}
         let object = ["stock symbol": quote.symbol, "stock name": quote.companyName, "stock percent": "\(quote.changePercent ?? 0.0)", "stock price": "\(quote.latestPrice ?? 0.0)", "id": key]

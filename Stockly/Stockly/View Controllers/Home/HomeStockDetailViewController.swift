@@ -55,10 +55,10 @@ class HomeStockDetialViewController: UIViewController, UITableViewDelegate, UITa
     
     @IBAction func saveButtonPressed(_ sender: Any) {
         guard let key = ref.childByAutoId().key else {return}
-        guard let quote = stockController?.quote else {return}
-        let object = ["stock symbol": quote.symbol, "stock name": quote.companyName, "stock percent": "\(quote.changePercent ?? 0.0)", "stock price": "\(quote.latestPrice ?? 0.0)", "id": key]
+        guard let stock = stock else {return}
+        let object = ["stock symbol": stock.quote.symbol, "stock name": stock.quote.companyName, "stock percent": "\(stock.quote.changePercent ?? 0.0)", "stock price": "\(stock.quote.latestPrice ?? 0.0)", "id": key]
         ref.child(key).setValue(object)
-        Service.showAlert(on: self, style: .alert, title: "Stock Saved!", message: "Successfully added \(quote.companyName) to watchlist")
+        Service.showAlert(on: self, style: .alert, title: "Stock Saved!", message: "Successfully added \(stock.quote.companyName) to watchlist")
     }
     
     func getChartData() {
