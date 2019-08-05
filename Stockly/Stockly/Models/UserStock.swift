@@ -8,6 +8,7 @@
 
 import Foundation
 
+//stock saved in watchlist
 class UserStock: NSObject {
     var id: String
     var stockSymbol: String

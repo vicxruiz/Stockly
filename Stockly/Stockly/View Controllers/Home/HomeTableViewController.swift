@@ -59,6 +59,7 @@ class HomeTableViewController: UITableViewController {
             destinationVC.techStockController = techStockController
             destinationVC.healthStockController = healthStockController
             destinationVC.industrialStockController = industrialStockController
+            destinationVC.stockController = stockController
             if let indexPath = self.tableView.indexPathForSelectedRow {
                 destinationVC.stock = stockFor(indexPath: indexPath)
             }

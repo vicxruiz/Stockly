@@ -36,24 +36,22 @@ class HomeStockDetialViewController: UIViewController, UITableViewDelegate, UITa
     @IBOutlet weak var newsCollectionView: UICollectionView!
     @IBOutlet weak var mChart: LineChartView!
     @IBOutlet weak var analyzeButton: UIButton!
+    @IBOutlet weak var stockLogoImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        guard let uid = Auth.auth().currentUser?.uid else {return}
-        
-        ref = Database.database().reference().child("users").child(uid).child("WatchList")
-        analyzeButton.layer.masksToBounds = true
-        analyzeButton.layer.cornerRadius = 5
         keyDataTableView.delegate = self
         keyDataTableView.dataSource = self
         newsCollectionView.delegate = self
         newsCollectionView.dataSource = self
         updateViews()
         getChartData()
-        mChart.borderColor = .white
     }
     
     @IBAction func saveButtonPressed(_ sender: Any) {
+        
+        guard let uid = Auth.auth().currentUser?.uid else {return}
+        ref = Database.database().reference().child("users").child(uid).child("WatchList")
         guard let key = ref.childByAutoId().key else {return}
         guard let stock = stock else {return}
         let object = ["stock symbol": stock.quote.symbol, "stock name": stock.quote.companyName, "stock percent": "\(stock.quote.changePercent ?? 0.0)", "stock price": "\(stock.quote.latestPrice ?? 0.0)", "id": key]
@@ -190,11 +188,16 @@ class HomeStockDetialViewController: UIViewController, UITableViewDelegate, UITa
     }
     
     func updateViews() {
-        self.title = stock?.quote.symbol
-        if let latestPrice = stock?.quote.latestPrice {
+        analyzeButton.layer.masksToBounds = true
+        analyzeButton.layer.cornerRadius = 5
+        mChart.borderColor = .white
+        guard let stock = stock else {return}
+        self.title = stock.quote.symbol
+        fetchImage(stock)
+        if let latestPrice = stock.quote.latestPrice {
             latestPriceLabel.text = "$\(latestPrice)"
         }
-        if let changePercentage = stock?.quote.changePercent {
+        if let changePercentage = stock.quote.changePercent {
             let roundedPercent = Double(round(1000 * changePercentage)/1000)
             changePercentLabel.text = "\(roundedPercent)%"
             if "\(changePercentage)".contains("-") {
@@ -203,10 +206,27 @@ class HomeStockDetialViewController: UIViewController, UITableViewDelegate, UITa
                 changePercentLabel.textColor = UIColor.green
             }
         }
-        if let news = stock?.news {
-            collectionViewData = news
+        collectionViewData = stock.news
+    }
+    
+    func fetchImage(_ stock: Batch) {
+        guard let stockController = stockController else {return}
+        stockController.fetchLogo(stock.quote.symbol) { (error) in
+            
+            if let error = error {
+                print(error)
+            }
+            
+            stockController.getData(url: URL(string: stockController.stockLogoURL!)!, completion: { (data, error) in
+                guard let data = data else { return }
+                DispatchQueue.main.async {
+                    self.stockLogoImageView.image = UIImage(data: data)
+                }
+            })
         }
     }
+    
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "NewsDetail" {
@@ -222,6 +242,8 @@ class HomeStockDetialViewController: UIViewController, UITableViewDelegate, UITa
         navigationItem.backBarButtonItem?.tintColor = .white
         
     }
+    
+    
 }
 
 

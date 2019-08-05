@@ -115,4 +115,6 @@ struct Chart: Decodable {
     let changeOverTime: Double?
 }
 
-
+struct Logo: Decodable {
+    let url: String
+}

@@ -217,7 +217,7 @@
 		575BE62A2294E41B00456C12 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				57811EF122BC7A2D0000A046 /* New Group */,
+				57811EF122BC7A2D0000A046 /* Profile */,
 				574516E822B19254000F8118 /* Home */,
 				575A1EF02297770A00EB40F6 /* Navigation */,
 				575A1EEF229776CE00EB40F6 /* Search */,
@@ -291,12 +291,12 @@
 			path = "Model Controllers";
 			sourceTree = "<group>";
 		};
-		57811EF122BC7A2D0000A046 /* New Group */ = {
+		57811EF122BC7A2D0000A046 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
 				57811EF222BC7A410000A046 /* ProfileTableViewController.swift */,
 			);
-			path = "New Group";
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		6B90094933674CD237A1EA42 /* Pods */ = {
