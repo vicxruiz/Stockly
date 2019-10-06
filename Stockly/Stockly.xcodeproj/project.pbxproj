@@ -637,13 +637,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PX6J4SWYW9;
+				DEVELOPMENT_TEAM = VXUQXR6S56;
 				INFOPLIST_FILE = Stockly/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = vicxruiz.Stockly;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vicxruiz.Stockly;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -656,13 +656,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PX6J4SWYW9;
+				DEVELOPMENT_TEAM = VXUQXR6S56;
 				INFOPLIST_FILE = Stockly/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = vicxruiz.Stockly;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vicxruiz.Stockly;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
