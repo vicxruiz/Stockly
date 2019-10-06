@@ -9,3 +9,11 @@ Stock.ly provides a live analysis of every stock across a number of markets to p
 Demo the app by downloading it from TestFlight.
 
 <br>
+
+### Key Features
+
+- Discover trending stocks
+- Search and view analysis of every stock
+- Save any stock to watch-list
+
+
