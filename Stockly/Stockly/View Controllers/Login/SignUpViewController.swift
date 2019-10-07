@@ -86,6 +86,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
             let action = UIAlertAction(title: "OK", style: .cancel, handler: { (action) in
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 let vc = storyboard.instantiateViewController(withIdentifier: "MainTabBarController")
+                vc.modalPresentationStyle = .fullScreen
                 self.present(vc, animated: true, completion: nil)
             })
             alertController.addAction(action)

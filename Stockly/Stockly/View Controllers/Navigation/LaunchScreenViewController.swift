@@ -21,6 +21,7 @@ fileprivate func checkLoggedInUserStatus() {
         DispatchQueue.main.async {
             let storyboard = UIStoryboard(name: "Onboarding", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "OnboardingViewController") as! OnboardingNavigationViewController
+            vc.modalPresentationStyle = .fullScreen
             self.present(vc, animated: false, completion: nil)
         }
     }

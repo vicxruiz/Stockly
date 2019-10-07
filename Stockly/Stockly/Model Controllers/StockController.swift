@@ -21,6 +21,7 @@ class StockController {
     var stock: Stock?
     var stockBatch: Batch?
     var stockLogoURL: String?
+    var searchStocks: [SearchStock] = []
     
     enum HTTPMethod: String {
         case get = "GET"
@@ -159,6 +160,45 @@ class StockController {
         URLSession.shared.dataTask(with: request) { (data, _, error) in
             completion(data, error)
             }.resume()
+    }
+    
+    func searchStock(with searchTerm: String, completion: @escaping ([SearchStock]?, Error?) -> Void) {
+        var components = URLComponents()
+        components.scheme = "https"
+        components.host = "cloud.iexapis.com"
+        components.path = "/stable/search/\(searchTerm)"
+        
+        //adds query items
+        //adds query items
+        let queryTokenQuery = URLQueryItem(name: "token", value: "pk_751dcb0db9b34c09a037eaf739af02cb")
+        components.queryItems = [queryTokenQuery]
+               
+        print(components.url ?? "no url")
+        guard let url = components.url else {
+            print("no url")
+            return
+        }
+        //Makes request
+        var request = URLRequest(url: url)
+        request.httpMethod = HTTPMethod.get.rawValue
+        
+        dataGetter.fetchData(with: request) { (_, data, error) in
+            //error handling
+            if let error = error {
+                completion(nil, error)
+            }
+            guard let data = data else { return }
+            
+            //decoding
+            let decoder = JSONDecoder()
+            do {
+                let data = try decoder.decode([SearchStock].self, from: data)
+                completion(data, nil)
+            } catch {
+                print("error decoding data: \(error)")
+                completion(nil, error)
+            }
+        }
     }
 }
 

@@ -29,6 +29,7 @@ class SettingsViewController: UIViewController {
                 try Auth.auth().signOut()
                 let storyboard = UIStoryboard(name: "Onboarding", bundle: nil)
                 let vc = storyboard.instantiateViewController(withIdentifier: "OnboardingViewController") as! OnboardingNavigationViewController
+                vc.modalPresentationStyle = .fullScreen
                 self.present(vc, animated: true, completion: nil)
             }
             catch let err {
@@ -39,7 +40,5 @@ class SettingsViewController: UIViewController {
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         Service.showAlert(on: self, style: .actionSheet, title: nil, message: nil, actions: [signOutAction, cancelAction], completion: nil)
     }
-    
-    
     
 }

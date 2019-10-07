@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -38,6 +38,7 @@
 		57BA390622BC31A80067D651 /* StockNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BA390522BC31A80067D651 /* StockNewsViewController.swift */; };
 		57BA390822BC498B0067D651 /* OnboardingNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BA390722BC498B0067D651 /* OnboardingNavigationViewController.swift */; };
 		57BB55CB22BFC604001F6AB5 /* SearchAnalyzeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BB55CA22BFC604001F6AB5 /* SearchAnalyzeViewController.swift */; };
+		57C03B32234B9CE800611AA2 /* iOSDropDown.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57C03B31234B9CE800611AA2 /* iOSDropDown.framework */; };
 		57F765C62294E66000431F79 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 57F765C52294E66000431F79 /* Default-568h@2x.png */; };
 		57F765D62294EB1B00431F79 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F765D52294EB1B00431F79 /* Service.swift */; };
 		57F765D92295844A00431F79 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F765D82295844A00431F79 /* LaunchScreenViewController.swift */; };
@@ -86,6 +87,7 @@
 		57BA390522BC31A80067D651 /* StockNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockNewsViewController.swift; sourceTree = "<group>"; };
 		57BA390722BC498B0067D651 /* OnboardingNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingNavigationViewController.swift; sourceTree = "<group>"; };
 		57BB55CA22BFC604001F6AB5 /* SearchAnalyzeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAnalyzeViewController.swift; sourceTree = "<group>"; };
+		57C03B31234B9CE800611AA2 /* iOSDropDown.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = iOSDropDown.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		57F765C52294E66000431F79 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		57F765D52294EB1B00431F79 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		57F765D82295844A00431F79 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57C03B32234B9CE800611AA2 /* iOSDropDown.framework in Frameworks */,
 				5FE9D54C2EA0A29077A5DCE7 /* Pods_Stockly.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -115,6 +118,7 @@
 		3223B0EDA53B3B493B4B8111 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				57C03B31234B9CE800611AA2 /* iOSDropDown.framework */,
 				8896165C8C1E1A1C568E34C2 /* Pods_Stockly.framework */,
 			);
 			name = Frameworks;
@@ -408,40 +412,11 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Stockly/Pods-Stockly-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
-				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
-				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
-				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
-				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
-				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
-				"${BUILT_PRODUCTS_DIR}/JGProgressHUD/JGProgressHUD.framework",
-				"${BUILT_PRODUCTS_DIR}/LBTAComponents/LBTAComponents.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
-				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-Stockly/Pods-Stockly-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JGProgressHUD.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LBTAComponents.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-Stockly/Pods-Stockly-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

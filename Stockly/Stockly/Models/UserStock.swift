@@ -24,3 +24,10 @@ class UserStock: NSObject {
         self.stockPerenctage = stockPercentage
     }
 }
+
+struct SearchStock: Codable {
+    var symbol: String
+    var securityName: String
+    var region: String
+    var exchange: String
+}

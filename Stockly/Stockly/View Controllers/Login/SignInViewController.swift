@@ -72,6 +72,7 @@ class SignInViewController: UIViewController {
             self.hud.dismiss(animated: true)
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "MainTabBarController")
+            vc.modalPresentationStyle = .fullScreen
             self.present(vc, animated: true, completion: nil)
         }
     }
