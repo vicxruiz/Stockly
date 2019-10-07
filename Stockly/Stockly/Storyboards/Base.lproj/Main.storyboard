@@ -1489,40 +1489,61 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" red="0.050980392159999999" green="0.070588235289999995" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SearchCell" textLabel="oVp-9N-noL" detailTextLabel="C9J-yc-3oe" style="IBUITableViewCellStyleValue1" id="jxe-d7-PxN">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SearchCell" rowHeight="84" id="jxe-d7-PxN" customClass="SearchTableViewCell" customModule="Stockly" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="84"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jxe-d7-PxN" id="XMV-ee-rar">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="84"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oVp-9N-noL">
-                                                    <rect key="frame" x="20" y="12" width="33.5" height="20.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PlZ-yg-ObD">
+                                                    <rect key="frame" x="352" y="32" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="C9J-yc-3oe">
-                                                    <rect key="frame" x="350" y="12" width="44" height="20.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exchange: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wee-vb-ylA">
+                                                    <rect key="frame" x="20" y="48.5" width="66.5" height="16"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U2T-c8-eMr">
+                                                    <rect key="frame" x="20" y="11" width="306" height="20.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="306" id="LuC-51-Yus"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="PlZ-yg-ObD" firstAttribute="centerY" secondItem="XMV-ee-rar" secondAttribute="centerY" id="2lo-i9-Ilv"/>
+                                                <constraint firstItem="wee-vb-ylA" firstAttribute="top" secondItem="U2T-c8-eMr" secondAttribute="bottom" constant="17" id="CaT-l8-rCz"/>
+                                                <constraint firstItem="PlZ-yg-ObD" firstAttribute="trailing" secondItem="XMV-ee-rar" secondAttribute="trailingMargin" id="Z95-yZ-uhr"/>
+                                                <constraint firstItem="PlZ-yg-ObD" firstAttribute="top" secondItem="XMV-ee-rar" secondAttribute="topMargin" constant="21" id="i0L-Mj-Y9Y"/>
+                                                <constraint firstItem="U2T-c8-eMr" firstAttribute="leading" secondItem="wee-vb-ylA" secondAttribute="leading" id="kco-Mw-7x8"/>
+                                                <constraint firstItem="U2T-c8-eMr" firstAttribute="leading" secondItem="XMV-ee-rar" secondAttribute="leadingMargin" id="mpi-Fx-Gn2"/>
+                                                <constraint firstItem="U2T-c8-eMr" firstAttribute="top" secondItem="XMV-ee-rar" secondAttribute="topMargin" id="ym0-Ro-Zou"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.050980392159999999" green="0.070588235289999995" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="exchangeLabel" destination="wee-vb-ylA" id="rjB-cd-OwC"/>
+                                            <outlet property="nameLabel" destination="U2T-c8-eMr" id="TRK-D1-dr0"/>
+                                            <outlet property="symbolLabel" destination="PlZ-yg-ObD" id="D5k-qz-tvg"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.050980392159999999" green="0.070588235289999995" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Bao-hy-OPl" firstAttribute="trailing" secondItem="BtO-ng-uie" secondAttribute="trailing" id="CXl-Xq-I9c"/>
-                            <constraint firstItem="Bao-hy-OPl" firstAttribute="bottom" secondItem="BtO-ng-uie" secondAttribute="bottom" id="Dma-kB-TcK"/>
-                            <constraint firstItem="Bao-hy-OPl" firstAttribute="top" secondItem="BtO-ng-uie" secondAttribute="top" id="Hko-Ff-WLg"/>
-                            <constraint firstItem="Bao-hy-OPl" firstAttribute="leading" secondItem="BtO-ng-uie" secondAttribute="leading" id="rik-Ux-e7l"/>
+                            <constraint firstItem="Bao-hy-OPl" firstAttribute="bottom" secondItem="BtO-ng-uie" secondAttribute="bottom" id="Dwh-gr-69z"/>
+                            <constraint firstItem="Bao-hy-OPl" firstAttribute="leading" secondItem="BtO-ng-uie" secondAttribute="leading" id="d10-AK-IsW"/>
+                            <constraint firstItem="Bao-hy-OPl" firstAttribute="top" secondItem="BtO-ng-uie" secondAttribute="top" id="h9f-wB-Mw0"/>
+                            <constraint firstItem="Bao-hy-OPl" firstAttribute="centerX" secondItem="MNb-iO-Qo6" secondAttribute="centerX" id="khC-oV-m1l"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="BtO-ng-uie"/>
                     </view>

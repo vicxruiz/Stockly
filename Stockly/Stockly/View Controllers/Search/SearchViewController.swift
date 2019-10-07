@@ -131,11 +131,13 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "SearchCell", for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "SearchCell", for: indexPath) as? SearchTableViewCell else {
+            print("no cell")
+            return UITableViewCell()
+        }
         
         let stock = searchResults[indexPath.row]
-        cell.textLabel?.text = stock.securityName
-        cell.detailTextLabel?.text = stock.symbol
+        cell.stock = stock
         
         return cell
     }
