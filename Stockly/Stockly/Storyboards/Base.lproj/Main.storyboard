@@ -142,17 +142,15 @@
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="DUq-tq-Xfh" firstAttribute="top" secondItem="YBo-tn-wyf" secondAttribute="bottom" constant="8" symbolic="YES" id="1wt-be-ILU"/>
-                                        <constraint firstAttribute="bottom" secondItem="DUq-tq-Xfh" secondAttribute="bottom" constant="11.5" id="6I0-E2-tlk"/>
                                         <constraint firstItem="YBo-tn-wyf" firstAttribute="leading" secondItem="R5w-72-mhi" secondAttribute="leadingMargin" id="9pV-ZR-s0P"/>
                                         <constraint firstItem="4XF-cc-gvJ" firstAttribute="top" secondItem="R5w-72-mhi" secondAttribute="topMargin" constant="31" id="DXb-8N-iqt"/>
-                                        <constraint firstItem="DUq-tq-Xfh" firstAttribute="top" secondItem="YBo-tn-wyf" secondAttribute="bottom" constant="8" id="Fmb-za-9WN"/>
                                         <constraint firstItem="Jhw-ka-dWA" firstAttribute="centerY" secondItem="4XF-cc-gvJ" secondAttribute="centerY" id="HoA-Zh-LnG"/>
+                                        <constraint firstItem="DUq-tq-Xfh" firstAttribute="top" secondItem="YBo-tn-wyf" secondAttribute="bottom" constant="8" id="J95-Zu-HoY"/>
                                         <constraint firstItem="Jhw-ka-dWA" firstAttribute="top" secondItem="R5w-72-mhi" secondAttribute="topMargin" constant="36" id="RZk-jB-VOH"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="DUq-tq-Xfh" secondAttribute="bottom" constant="1" id="SRs-q8-iCr"/>
-                                        <constraint firstItem="YBo-tn-wyf" firstAttribute="leading" secondItem="DUq-tq-Xfh" secondAttribute="leading" id="cSd-Pj-3zl"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="DUq-tq-Xfh" secondAttribute="bottom" constant="0.5" id="ZcJ-8a-9eD"/>
                                         <constraint firstItem="YBo-tn-wyf" firstAttribute="top" secondItem="R5w-72-mhi" secondAttribute="topMargin" id="mnc-fU-zvm"/>
                                         <constraint firstItem="4XF-cc-gvJ" firstAttribute="trailing" secondItem="R5w-72-mhi" secondAttribute="trailingMargin" id="nVO-5E-DvT"/>
+                                        <constraint firstItem="DUq-tq-Xfh" firstAttribute="leading" secondItem="YBo-tn-wyf" secondAttribute="leading" id="p9S-3R-moC"/>
                                         <constraint firstItem="4XF-cc-gvJ" firstAttribute="leading" secondItem="Jhw-ka-dWA" secondAttribute="trailing" constant="8" symbolic="YES" id="yRe-Kq-zsm"/>
                                     </constraints>
                                 </tableViewCellContentView>
@@ -1503,23 +1501,24 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exchange: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wee-vb-ylA">
-                                                    <rect key="frame" x="20" y="48.5" width="66.5" height="16"/>
+                                                    <rect key="frame" x="20" y="48" width="66.5" height="16"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U2T-c8-eMr">
-                                                    <rect key="frame" x="20" y="11" width="306" height="20.5"/>
+                                                    <rect key="frame" x="20" y="11" width="306" height="20"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="306" id="LuC-51-Yus"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="PlZ-yg-ObD" firstAttribute="centerY" secondItem="XMV-ee-rar" secondAttribute="centerY" id="2lo-i9-Ilv"/>
+                                                <constraint firstAttribute="bottom" secondItem="wee-vb-ylA" secondAttribute="bottom" constant="20" id="6px-m9-bDq"/>
                                                 <constraint firstItem="wee-vb-ylA" firstAttribute="top" secondItem="U2T-c8-eMr" secondAttribute="bottom" constant="17" id="CaT-l8-rCz"/>
                                                 <constraint firstItem="PlZ-yg-ObD" firstAttribute="trailing" secondItem="XMV-ee-rar" secondAttribute="trailingMargin" id="Z95-yZ-uhr"/>
                                                 <constraint firstItem="PlZ-yg-ObD" firstAttribute="top" secondItem="XMV-ee-rar" secondAttribute="topMargin" constant="21" id="i0L-Mj-Y9Y"/>
