@@ -12,10 +12,7 @@
 		571701AB22975A0400361B09 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571701AA22975A0400361B09 /* SearchViewController.swift */; };
 		571701AD22975E6800361B09 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571701AC22975E6800361B09 /* ResultsViewController.swift */; };
 		571701B42297710000361B09 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571701B32297710000361B09 /* SettingsViewController.swift */; };
-		5734E92322B84C540020BECA /* HomeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5734E92222B84C540020BECA /* HomeCollectionViewController.swift */; };
-		5734E92522B84EFB0020BECA /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5734E92422B84EFB0020BECA /* HomeCollectionViewCell.swift */; };
 		5734E92722B85BE50020BECA /* SectorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5734E92622B85BE50020BECA /* SectorController.swift */; };
-		5734E92922B860530020BECA /* SectorCollectionViewCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5734E92822B860530020BECA /* SectorCollectionViewCellDelegate.swift */; };
 		5734E92B22B988830020BECA /* HomeStockDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5734E92A22B988830020BECA /* HomeStockDetailViewController.swift */; };
 		574516EA22B19270000F8118 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574516E922B1926F000F8118 /* HomeTableViewController.swift */; };
 		574516EC22B192D9000F8118 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574516EB22B192D9000F8118 /* HomeTableViewCell.swift */; };
@@ -27,6 +24,7 @@
 		5760224C2294E226003F1784 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5760224A2294E226003F1784 /* Main.storyboard */; };
 		5760224E2294E22D003F1784 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5760224D2294E22D003F1784 /* Assets.xcassets */; };
 		576022512294E22D003F1784 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5760224F2294E22D003F1784 /* LaunchScreen.storyboard */; };
+		576D71BA2381F90F00C77187 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576D71B92381F90E00C77187 /* ForgotPasswordViewController.swift */; };
 		57811EF022BC62EA0000A046 /* StockSearchNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57811EEF22BC62EA0000A046 /* StockSearchNewsViewController.swift */; };
 		57811EF322BC7A420000A046 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57811EF222BC7A410000A046 /* ProfileTableViewController.swift */; };
 		57811EF522BC7E2A0000A046 /* UserStock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57811EF422BC7E2A0000A046 /* UserStock.swift */; };
@@ -60,10 +58,7 @@
 		571701AA22975A0400361B09 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		571701AC22975E6800361B09 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		571701B32297710000361B09 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		5734E92222B84C540020BECA /* HomeCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewController.swift; sourceTree = "<group>"; };
-		5734E92422B84EFB0020BECA /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		5734E92622B85BE50020BECA /* SectorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectorController.swift; sourceTree = "<group>"; };
-		5734E92822B860530020BECA /* SectorCollectionViewCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectorCollectionViewCellDelegate.swift; sourceTree = "<group>"; };
 		5734E92A22B988830020BECA /* HomeStockDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeStockDetailViewController.swift; sourceTree = "<group>"; };
 		574516E922B1926F000F8118 /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		574516EB22B192D9000F8118 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
@@ -77,6 +72,7 @@
 		5760224D2294E22D003F1784 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		576022502294E22D003F1784 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		576022522294E22D003F1784 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		576D71B92381F90E00C77187 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		57811EEF22BC62EA0000A046 /* StockSearchNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockSearchNewsViewController.swift; sourceTree = "<group>"; };
 		57811EF222BC7A410000A046 /* ProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
 		57811EF422BC7E2A0000A046 /* UserStock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStock.swift; sourceTree = "<group>"; };
@@ -130,8 +126,6 @@
 			isa = PBXGroup;
 			children = (
 				574516E922B1926F000F8118 /* HomeTableViewController.swift */,
-				5734E92222B84C540020BECA /* HomeCollectionViewController.swift */,
-				5734E92822B860530020BECA /* SectorCollectionViewCellDelegate.swift */,
 				5734E92A22B988830020BECA /* HomeStockDetailViewController.swift */,
 				57BA390522BC31A80067D651 /* StockNewsViewController.swift */,
 				57811EF822BC9C920000A046 /* AnalyzeViewController.swift */,
@@ -153,6 +147,7 @@
 				57F765E22295997800431F79 /* SignInViewController.swift */,
 				57F765E42295998F00431F79 /* SignUpViewController.swift */,
 				57F765DE229586AD00431F79 /* WelcomeViewController.swift */,
+				576D71B92381F90E00C77187 /* ForgotPasswordViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -211,7 +206,6 @@
 		575BE6292294E40C00456C12 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				5734E92422B84EFB0020BECA /* HomeCollectionViewCell.swift */,
 				571701A6229757E100361B09 /* TableViewCell.swift */,
 				571701A8229758CB00361B09 /* CollectionViewCell.swift */,
 				574516EB22B192D9000F8118 /* HomeTableViewCell.swift */,
@@ -436,10 +430,9 @@
 				57F765E32295997800431F79 /* SignInViewController.swift in Sources */,
 				57873DC822BAD5C300C4F311 /* IndustrialStockController.swift in Sources */,
 				57F765D62294EB1B00431F79 /* Service.swift in Sources */,
-				5734E92522B84EFB0020BECA /* HomeCollectionViewCell.swift in Sources */,
 				5734E92B22B988830020BECA /* HomeStockDetailViewController.swift in Sources */,
 				571701A9229758CB00361B09 /* CollectionViewCell.swift in Sources */,
-				5734E92322B84C540020BECA /* HomeCollectionViewController.swift in Sources */,
+				576D71BA2381F90F00C77187 /* ForgotPasswordViewController.swift in Sources */,
 				5734E92722B85BE50020BECA /* SectorController.swift in Sources */,
 				57873DC422BAC64F00C4F311 /* TechStockController.swift in Sources */,
 				57C03B34234BC7B300611AA2 /* SearchTableViewCell.swift in Sources */,
@@ -464,7 +457,6 @@
 				574C846A22B2ECF500390342 /* StockController.swift in Sources */,
 				571701A7229757E100361B09 /* TableViewCell.swift in Sources */,
 				574C846622B2EC8300390342 /* DataGetter.swift in Sources */,
-				5734E92922B860530020BECA /* SectorCollectionViewCellDelegate.swift in Sources */,
 				574516EA22B19270000F8118 /* HomeTableViewController.swift in Sources */,
 				57F765DF229586AD00431F79 /* WelcomeViewController.swift in Sources */,
 				57F765DD229584EB00431F79 /* Credit.swift in Sources */,
@@ -616,13 +608,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VXUQXR6S56;
+				DEVELOPMENT_TEAM = J95SPSM87P;
 				INFOPLIST_FILE = Stockly/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.vicxruiz.Stockly;
+				PRODUCT_BUNDLE_IDENTIFIER = com.victorruiz.Stockly;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -635,13 +627,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VXUQXR6S56;
+				DEVELOPMENT_TEAM = J95SPSM87P;
 				INFOPLIST_FILE = Stockly/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.vicxruiz.Stockly;
+				PRODUCT_BUNDLE_IDENTIFIER = com.victorruiz.Stockly;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

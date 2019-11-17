@@ -117,6 +117,7 @@ class HomeStockDetialViewController: UIViewController, UITableViewDelegate, UITa
             let roundedPreviousClose =  String(format: "%.2f", previousClose)
             self.keyDataTableData.append(roundedPreviousClose)
         } else {
+            print("120")
             print("Previous Close Is Null")
         }
         

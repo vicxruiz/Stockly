@@ -15,7 +15,9 @@ import FirebaseAuth
 
 class ResultsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
     
-    var stockController: StockController?
+    let stockController = StockController()
+    var stock: SearchStock?
+    var data: Batch?
     let dataGetter = DataGetter()
     var ref: DatabaseReference!
     
@@ -26,6 +28,7 @@ class ResultsViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet weak var stockPercentageLabel: UILabel!
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var analyzeButton: UIButton!
+    @IBOutlet weak var stockLogoImageView: UIImageView!
     
     var keyDataTableData: [String] = []
     var keyDataTableKeys = [
@@ -45,16 +48,21 @@ class ResultsViewController: UIViewController, UITableViewDelegate, UITableViewD
         keyDataTableView.dataSource = self
         newsCollectionView.delegate = self
         newsCollectionView.dataSource = self
-        getChartData()
-        updateViews()
+        makeBatchRequest()
+        updateNav()
         guard let uid = Auth.auth().currentUser?.uid else {return}
         
         ref = Database.database().reference().child("users").child(uid).child("WatchList")
     }
     
+    func updateNav() {
+        guard let stock = stock else {return}
+        self.title = stock.symbol
+    }
+    
     @IBAction func saveButtonPressed() {
         guard let key = ref.childByAutoId().key else {return}
-        guard let quote = stockController?.quote else {return}
+        guard let quote = stockController.quote else {return}
         let object = ["stock symbol": quote.symbol, "stock name": quote.companyName, "stock percent": "\(quote.changePercent ?? 0.0)", "stock price": "\(quote.latestPrice ?? 0.0)", "id": key]
         ref.child(key).setValue(object)
         Service.showAlert(on: self, style: .alert, title: "Stock Saved!", message: "Successfully added \(quote.companyName) to watchlist")
@@ -62,11 +70,9 @@ class ResultsViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     private func getChartData() {
         var values: [Double] = []
-        if let stockChart = stockController?.chart {
-            for x in stockChart {
-                if let x = x.close {
-                    values.append(x)
-                }
+        for x in stockController.chart {
+            if let x = x.close {
+                values.append(x)
             }
         }
         setChart(values: values)
@@ -114,7 +120,8 @@ class ResultsViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = keyDataTableView.dequeueReusableCell(withIdentifier: "SearchKeyDataTableViewCell", for: indexPath) as! SearchKeyDataTableViewCell
-        guard let quote = stockController?.quote else {return cell}
+        guard let quote = stockController.quote else {return cell}
+        
         if let previousClose = quote.previousClose {
             let roundedPreviousClose =  String(format: "%.2f", previousClose)
             self.keyDataTableData.append(roundedPreviousClose)
@@ -190,8 +197,8 @@ class ResultsViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func updateViews() {
-        guard let quote = stockController?.quote else {return}
-        self.title = quote.symbol
+        guard let quote = stockController.quote else {return}
+        fetchImage(quote)
         if let latestPrice = quote.latestPrice {
             stockPriceLabel.text = "$\(latestPrice)"
         }
@@ -204,9 +211,8 @@ class ResultsViewController: UIViewController, UITableViewDelegate, UITableViewD
                 stockPercentageLabel.textColor = UIColor.green
             }
         }
-        if let news = stockController?.news {
-            collectionViewData = news
-        }
+        
+        collectionViewData = stockController.news
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -223,6 +229,49 @@ class ResultsViewController: UIViewController, UITableViewDelegate, UITableViewD
         navigationItem.backBarButtonItem?.tintColor = .white
         
     }
+    
+    func makeBatchRequest() {
+        
+        guard let stock = stock else {return}
+        stockController.fetchStock(stock.symbol) { (error) in
+
+            var noValidStock = false
+            if self.stockController.quote?.companyName == nil {
+                noValidStock = true
+            }
+            DispatchQueue.main.async {
+                if let error = error {
+                    print(error)
+                }
+                if noValidStock {
+                    Service.showAlert(on: self, style: .alert, title: "Search Error", message: "Please Provide Valid Symbol")
+                    return
+                }
+                self.keyDataTableView.reloadData()
+                self.newsCollectionView.reloadData()
+                self.getChartData()
+                self.updateViews()
+                //let batch = self.stockController.stockBatch
+            }
+        }
+    }
+    
+    func fetchImage(_ stock: Quote) {
+        stockController.fetchLogo(stock.symbol) { (error) in
+            
+            if let error = error {
+                print(error)
+            }
+            
+            self.stockController.getData(url: URL(string: self.stockController.stockLogoURL!)!, completion: { (data, error) in
+                guard let data = data else { return }
+                DispatchQueue.main.async {
+                    self.stockLogoImageView.image = UIImage(data: data)
+                }
+            })
+        }
+    }
+
     
 }
 

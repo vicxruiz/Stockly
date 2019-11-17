@@ -35,8 +35,7 @@ class SignInViewController: UIViewController {
     }
     
     @IBAction func forgotPasswordButtonPressed(_ sender: Any) {
-        print("forgotPassword")
-//        performSegue(withIdentifier: "forgot", sender: self)
+        performSegue(withIdentifier: "ForgotPasswordSegue", sender: self)
     }
     
     override func viewDidLoad() {

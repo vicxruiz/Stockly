@@ -94,29 +94,6 @@ extension SearchViewController: UISearchBarDelegate {
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         searchBar.showsCancelButton = true
     }
-    
-//    func makeBatchRequest() {
-//        stockController.fetchStock(enteredSymbol) { (error) in
-//
-//            var noValidStock = false
-//            if self.stockController.quote?.companyName == nil {
-//                noValidStock = true
-//            }
-//            DispatchQueue.main.async {
-//                if let error = error {
-//                    print(error)
-//                }
-//                if noValidStock {
-//                    Service.showAlert(on: self, style: .alert, title: "Search Error", message: "Please Provide Valid Symbol")
-//                    return
-//                }
-//                self.performSegue(withIdentifier: "SearchStock", sender: self)
-//                print("done")
-//            }
-//
-//        }
-//    }
-    
 }
 
 extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
@@ -149,8 +126,9 @@ extension SearchViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "SearchStock" {
-            let destinationVC = segue.destination as! ResultsViewController
-            destinationVC.stockController = stockController
+            guard let destinationVC = segue.destination as? ResultsViewController, let indexPath = tableView.indexPathForSelectedRow else {return}
+            let stock = searchResults[indexPath.row]
+            destinationVC.stock = stock
         }
         let backItem = UIBarButtonItem()
         backItem.title = "Back"
