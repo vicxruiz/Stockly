@@ -80,6 +80,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
             
             self.saveUserIntoFirebase()
             self.hud.dismiss(animated: true)
+            UserDefaults.standard.set(name, forKey: "name")
             
             //adds alert message
             let alertController = UIAlertController(title: "Sign Up Successful", message: "Time to check out some stocks", preferredStyle: .alert)

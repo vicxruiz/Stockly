@@ -10,16 +10,46 @@ import Foundation
 import FirebaseAuth
 import FirebaseDatabase
 
-class SettingsViewController: UIViewController {
+class SettingsViewController: UITableViewController {
     
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var logOutButton: UIButton!
-    @IBAction func backButton(_ sender: Any?) {
-        self.dismiss(animated: true, completion: nil)
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateViews()
         logOutButton.addTarget(self, action: #selector(handleSignOutButtonTapped), for: .touchUpInside)
+    }
+    
+    func updateViews() {
+        guard let currentUser = Auth.auth().currentUser else {
+            Service.showAlert(on: self, style: .alert, title: "Error Getting User", message: "please check connection and try again.")
+            return}
+
+        if UserDefaults.standard.value(forKey: "name") != nil {
+            nameLabel.text = UserDefaults.value(forKey: "name") as? String
+            emailLabel.text = currentUser.email
+            nameLabel.isHidden = false
+            emailLabel.isHidden = false
+        } else {
+            guard let uid = Auth.auth().currentUser?.uid else {return}
+            
+            let databaseRef: DatabaseReference!
+            databaseRef = Database.database().reference()
+
+            
+            databaseRef.child("users").child(uid).observeSingleEvent(of: .value, with: { (snapshot) in
+                guard let dict  = snapshot.value as? [String: Any] else {return}
+                let user = CurrentUser(uid: uid, dictionary: dict)
+                self.nameLabel.text = user.name
+                self.emailLabel.text = currentUser.email
+            }) { (err) in
+                DispatchQueue.main.async {
+                    Service.showAlert(on: self, style: .alert, title: "Error Finding User", message: err.localizedDescription)
+                }
+            }
+        }
     }
     
     @objc func handleSignOutButtonTapped(sender: UIButton!) {

@@ -28,7 +28,7 @@ class ProfileTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        hud.textLabel.text = "Loading Activities..."
+        hud.textLabel.text = "Loading Watchlist..."
         hud.show(in: view, animated: true)
         addStockToArray()
     }
