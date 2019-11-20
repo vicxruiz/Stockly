@@ -272,7 +272,10 @@ class ResultsViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
     }
 
-    
+    @IBAction func analyzeButtonPressed(_ sender: Any) {
+           Service.showAlert(on: self, style: .alert, title: "Feature Coming Soon!", message: "Sentinement analysis for every stock.")
+       }
+       
 }
 
 extension ResultsViewController: UICollectionViewDelegate, UICollectionViewDataSource {

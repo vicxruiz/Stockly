@@ -213,7 +213,7 @@
             </objects>
             <point key="canvasLocation" x="3376.811594202899" y="618.75"/>
         </scene>
-        <!--Stockly-->
+        <!--Σtockly-->
         <scene sceneID="zw7-Sg-ds6">
             <objects>
                 <viewController id="U5k-C2-jJG" customClass="WelcomeController" customModule="Stockly" customModuleProvider="target" sceneMemberID="viewController">
@@ -289,7 +289,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ivg-Gu-2yM"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Stockly" id="Miy-6e-XQS"/>
+                    <navigationItem key="navigationItem" title="Σtockly" id="Miy-6e-XQS"/>
                     <connections>
                         <outlet property="facebookButton" destination="d8a-2T-I23" id="Wrc-FN-noq"/>
                         <outlet property="loginButton" destination="lRy-KI-VFf" id="eYn-rf-zea"/>

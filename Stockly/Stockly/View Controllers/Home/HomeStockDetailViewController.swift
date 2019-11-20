@@ -48,6 +48,10 @@ class HomeStockDetialViewController: UIViewController, UITableViewDelegate, UITa
         getChartData()
     }
     
+    @IBAction func analyzeButtonPressed(_ sender: Any) {
+        Service.showAlert(on: self, style: .alert, title: "Feature Coming Soon!", message: "Sentinement analysis for every stock.")
+    }
+    
     @IBAction func saveButtonPressed(_ sender: Any) {
         
         guard let uid = Auth.auth().currentUser?.uid else {return}

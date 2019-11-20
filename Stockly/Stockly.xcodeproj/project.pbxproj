@@ -36,7 +36,6 @@
 		57BA390622BC31A80067D651 /* StockNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BA390522BC31A80067D651 /* StockNewsViewController.swift */; };
 		57BA390822BC498B0067D651 /* OnboardingNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BA390722BC498B0067D651 /* OnboardingNavigationViewController.swift */; };
 		57BB55CB22BFC604001F6AB5 /* SearchAnalyzeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BB55CA22BFC604001F6AB5 /* SearchAnalyzeViewController.swift */; };
-		57C03B32234B9CE800611AA2 /* iOSDropDown.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57C03B31234B9CE800611AA2 /* iOSDropDown.framework */; };
 		57C03B34234BC7B300611AA2 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C03B33234BC7B200611AA2 /* SearchTableViewCell.swift */; };
 		57F765C62294E66000431F79 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 57F765C52294E66000431F79 /* Default-568h@2x.png */; };
 		57F765D62294EB1B00431F79 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F765D52294EB1B00431F79 /* Service.swift */; };
@@ -105,7 +104,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				57C03B32234B9CE800611AA2 /* iOSDropDown.framework in Frameworks */,
 				5FE9D54C2EA0A29077A5DCE7 /* Pods_Stockly.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -608,8 +606,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 39;
 				DEVELOPMENT_TEAM = J95SPSM87P;
 				INFOPLIST_FILE = Stockly/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -617,7 +617,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.victorruiz.Stockly;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -627,8 +627,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 39;
 				DEVELOPMENT_TEAM = J95SPSM87P;
 				INFOPLIST_FILE = Stockly/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -636,7 +638,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.victorruiz.Stockly;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
