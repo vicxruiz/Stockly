@@ -57,6 +57,7 @@
 		571701AA22975A0400361B09 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		571701AC22975E6800361B09 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		571701B32297710000361B09 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		5729E39823856F35007EE0B1 /* Stockly.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Stockly.entitlements; sourceTree = "<group>"; };
 		5734E92622B85BE50020BECA /* SectorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectorController.swift; sourceTree = "<group>"; };
 		5734E92A22B988830020BECA /* HomeStockDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeStockDetailViewController.swift; sourceTree = "<group>"; };
 		574516E922B1926F000F8118 /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
@@ -256,6 +257,7 @@
 		576022452294E226003F1784 /* Stockly */ = {
 			isa = PBXGroup;
 			children = (
+				5729E39823856F35007EE0B1 /* Stockly.entitlements */,
 				574C846422B2EC7600390342 /* Networking */,
 				5763D2D622B2E99E002C5324 /* Model Controllers */,
 				575BE62B2294E42600456C12 /* Styling */,
@@ -605,8 +607,9 @@
 			baseConfigurationReference = 2EC461C1B133537BD2210919 /* Pods-Stockly.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Stockly/Stockly.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 40;
+				CURRENT_PROJECT_VERSION = 41;
 				DEVELOPMENT_TEAM = J95SPSM87P;
 				INFOPLIST_FILE = Stockly/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -627,8 +630,9 @@
 			baseConfigurationReference = B6EF84E33B3923BA090D16A3 /* Pods-Stockly.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Stockly/Stockly.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 40;
+				CURRENT_PROJECT_VERSION = 41;
 				DEVELOPMENT_TEAM = J95SPSM87P;
 				INFOPLIST_FILE = Stockly/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;

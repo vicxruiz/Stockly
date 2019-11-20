@@ -17,6 +17,7 @@ import FacebookLogin
 import SwiftyJSON
 import FBSDKCoreKit
 import FBSDKLoginKit
+import AuthenticationServices
 
 //updates nav bar for clear background
 struct System {
