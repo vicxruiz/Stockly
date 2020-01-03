@@ -146,7 +146,9 @@
         <scene sceneID="lJd-sx-Kyc">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zJu-MZ-slz" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="fire (1)" id="S0x-Nq-E6T"/>
+                    <tabBarItem key="tabBarItem" title="" image="fire-1" id="S0x-Nq-E6T">
+                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZSM-SH-EHN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
@@ -744,7 +746,9 @@
         <scene sceneID="P04-ua-bF3">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="v4t-uM-qV1" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="magnifying-glass" id="YtW-5I-6ri"/>
+                    <tabBarItem key="tabBarItem" title="" image="search" id="YtW-5I-6ri">
+                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zJz-AU-Gj8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
@@ -849,7 +853,7 @@
         <scene sceneID="gKk-Yu-mDf">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ei7-GV-3cs" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="user (3)" id="lkQ-tA-icu">
+                    <tabBarItem key="tabBarItem" title="" image="user" id="lkQ-tA-icu">
                         <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
                     </tabBarItem>
                     <toolbarItems/>
@@ -1260,9 +1264,9 @@
     </scenes>
     <resources>
         <image name="drawkit-charts-and-graphs-800px" width="800" height="800"/>
-        <image name="fire (1)" width="32" height="32"/>
+        <image name="fire-1" width="21" height="21"/>
         <image name="icons8-settings-50" width="25" height="25"/>
-        <image name="magnifying-glass" width="32" height="32"/>
-        <image name="user (3)" width="32" height="32"/>
+        <image name="search" width="21" height="21"/>
+        <image name="user" width="21" height="21"/>
     </resources>
 </document>
