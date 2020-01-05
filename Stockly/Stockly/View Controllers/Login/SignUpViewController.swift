@@ -19,8 +19,6 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
-    @IBOutlet weak var phoneNumberField: UITextField!
-    @IBOutlet weak var dismissButton: UIButton!
     
     let hud: JGProgressHUD = {
         let hud = JGProgressHUD(style: .dark)
@@ -30,10 +28,6 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var signUpAccept: UIButton!
     
-    @IBAction func dismissButtonPressed(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-    }
-    
     @IBAction func signUpButtonPressed(_ sender: Any) {
         //error handling and ui presentations
         if self.usernameField.text == "" {
@@ -41,11 +35,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
             Service.showAlert(on: self, style: .alert, title: "Sign Up Error", message: "Name Field Required")
             return
         }
-        if self.phoneNumberField.text == "" {
-            self.hud.dismiss(animated: true)
-            Service.showAlert(on: self, style: .alert, title: "Sign Up Error", message: "Phone Number Required")
-            return
-        }
+        
         guard let name = usernameField.text else {return}
         let nameIsValid = isValidName(testStr: name)
         if !nameIsValid {
@@ -59,12 +49,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
             Service.showAlert(on: self, style: .alert, title: "Email Invalid", message: "Please Provide Valid Email")
             return
         }
-        guard let phoneNumber = phoneNumberField.text else {return}
-        let phoneNumberisValid = isValidPhoneNumber(testStr: phoneNumber)
-        if !phoneNumberisValid {
-            Service.showAlert(on: self, style: .alert, title: "Phone Number Invalid", message: "Please Provide Valid Phone Number")
-            return
-        }
+        
         guard let password = passwordField.text else {return}
         hud.textLabel.text = "Signing Up..."
         hud.show(in: view, animated: true)
@@ -112,22 +97,13 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         return emailTest.evaluate(with: testStr)
     }
     
-    //number check
-    func isValidPhoneNumber(testStr:String) -> Bool {
-        let PHONE_REGEX = "^\\d{3}\\d{3}\\d{4}$"
-        let phoneTest = NSPredicate(format: "SELF MATCHES %@", PHONE_REGEX)
-        return phoneTest.evaluate(with: testStr)
-    }
-    
     //adds data to database
     func saveUserIntoFirebase() {
         guard let name = usernameField.text else {return}
         guard let email = emailField.text else {return}
-        guard let phoneNumber = phoneNumberField.text else {return}
         guard let uid = Auth.auth().currentUser?.uid else {return}
         
         let dictionaryValues = ["name": name,
-                                "phone number": phoneNumber,
                                 "email": email]
         
         let databaseRef = Database.database().reference().child("users/\(uid)")
