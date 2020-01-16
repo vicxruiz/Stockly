@@ -58,6 +58,7 @@ class SettingsViewController: UITableViewController {
             (action) in
             do {
                 try Auth.auth().signOut()
+                UserDefaults.standard.removeObject(forKey: "name")
                 let storyboard = UIStoryboard(name: "Onboarding", bundle: nil)
                 let vc = storyboard.instantiateViewController(withIdentifier: "OnboardingViewController") as! OnboardingNavigationViewController
                 vc.modalPresentationStyle = .fullScreen
@@ -65,7 +66,9 @@ class SettingsViewController: UITableViewController {
             }
             catch let err {
                 print("Failed to sign out with error", err)
-                Service.showAlert(on: self, style: .alert, title: "Sign Out Error", message: err.localizedDescription)
+                DispathQueue.main.async {
+                    Service.showAlert(on: self, style: .alert, title: "Sign Out Error", message: err.localizedDescription)
+                }
             }
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
