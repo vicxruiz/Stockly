@@ -28,7 +28,8 @@ class SettingsViewController: UITableViewController {
             return}
 
         if UserDefaults.standard.value(forKey: "name") != nil {
-            nameLabel.text = UserDefaults.value(forKey: "name") as? String
+            print("hello")
+            nameLabel.text = UserDefaults.standard.value(forKey: "name") as? String
             emailLabel.text = currentUser.email
             nameLabel.isHidden = false
             emailLabel.isHidden = false
