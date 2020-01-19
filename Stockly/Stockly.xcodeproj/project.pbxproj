@@ -48,6 +48,9 @@
 		57F765E52295998F00431F79 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F765E42295998F00431F79 /* SignUpViewController.swift */; };
 		57F765EB2295C96400431F79 /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F765EA2295C96400431F79 /* CurrentUser.swift */; };
 		5FE9D54C2EA0A29077A5DCE7 /* Pods_Stockly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8896165C8C1E1A1C568E34C2 /* Pods_Stockly.framework */; };
+		986DBC7B23D3DD8200023A63 /* OnboardingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986DBC7A23D3DD8200023A63 /* OnboardingPageViewController.swift */; };
+		986DBC7D23D3DDB500023A63 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986DBC7C23D3DDB500023A63 /* OnboardingViewController.swift */; };
+		986DBC7F23D3DDD000023A63 /* OnboardingContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986DBC7E23D3DDD000023A63 /* OnboardingContentViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -97,6 +100,9 @@
 		57F765E42295998F00431F79 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		57F765EA2295C96400431F79 /* CurrentUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
 		8896165C8C1E1A1C568E34C2 /* Pods_Stockly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Stockly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		986DBC7A23D3DD8200023A63 /* OnboardingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageViewController.swift; sourceTree = "<group>"; };
+		986DBC7C23D3DDB500023A63 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		986DBC7E23D3DDD000023A63 /* OnboardingContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContentViewController.swift; sourceTree = "<group>"; };
 		B6EF84E33B3923BA090D16A3 /* Pods-Stockly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stockly.release.xcconfig"; path = "Target Support Files/Pods-Stockly/Pods-Stockly.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -217,6 +223,7 @@
 		575BE62A2294E41B00456C12 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				986DBC7923D3DD5100023A63 /* Onboarding */,
 				57811EF122BC7A2D0000A046 /* Profile */,
 				574516E822B19254000F8118 /* Home */,
 				575A1EF02297770A00EB40F6 /* Navigation */,
@@ -307,6 +314,16 @@
 				B6EF84E33B3923BA090D16A3 /* Pods-Stockly.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		986DBC7923D3DD5100023A63 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				986DBC7A23D3DD8200023A63 /* OnboardingPageViewController.swift */,
+				986DBC7C23D3DDB500023A63 /* OnboardingViewController.swift */,
+				986DBC7E23D3DDD000023A63 /* OnboardingContentViewController.swift */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -434,11 +451,13 @@
 				571701A9229758CB00361B09 /* CollectionViewCell.swift in Sources */,
 				576D71BA2381F90F00C77187 /* ForgotPasswordViewController.swift in Sources */,
 				5734E92722B85BE50020BECA /* SectorController.swift in Sources */,
+				986DBC7D23D3DDB500023A63 /* OnboardingViewController.swift in Sources */,
 				57873DC422BAC64F00C4F311 /* TechStockController.swift in Sources */,
 				57C03B34234BC7B300611AA2 /* SearchTableViewCell.swift in Sources */,
 				57BA390622BC31A80067D651 /* StockNewsViewController.swift in Sources */,
 				57811EF022BC62EA0000A046 /* StockSearchNewsViewController.swift in Sources */,
 				576022472294E226003F1784 /* AppDelegate.swift in Sources */,
+				986DBC7B23D3DD8200023A63 /* OnboardingPageViewController.swift in Sources */,
 				574C846322B2EA5200390342 /* Collection.swift in Sources */,
 				57BB55CB22BFC604001F6AB5 /* SearchAnalyzeViewController.swift in Sources */,
 				57811EF522BC7E2A0000A046 /* UserStock.swift in Sources */,
@@ -452,6 +471,7 @@
 				57F765D92295844A00431F79 /* LaunchScreenViewController.swift in Sources */,
 				57811EF722BC85360000A046 /* WatchListTableViewCell.swift in Sources */,
 				57F765EB2295C96400431F79 /* CurrentUser.swift in Sources */,
+				986DBC7F23D3DDD000023A63 /* OnboardingContentViewController.swift in Sources */,
 				571701AD22975E6800361B09 /* ResultsViewController.swift in Sources */,
 				571701AB22975A0400361B09 /* SearchViewController.swift in Sources */,
 				574C846A22B2ECF500390342 /* StockController.swift in Sources */,
