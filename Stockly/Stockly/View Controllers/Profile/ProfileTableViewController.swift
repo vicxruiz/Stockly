@@ -123,4 +123,27 @@ class ProfileTableViewController: UITableViewController {
         return watchList.count
     }
     
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            guard let uid = Auth.auth().currentUser?.uid else {return}
+            let databaseRef: DatabaseReference!
+            databaseRef = Database.database().reference()
+            let stock = watchList[indexPath.row]
+            let stockID = stock.id
+            databaseRef.child("users").child(uid).child("WatchList").child("\(stockID)").removeValue(completionBlock: { (error, refer) in
+                if error != nil {
+                    DispatchQueue.main.async {
+                        Service.showAlert(on: self, style: .alert, title: "Error deleting stock", message: "Please check your connection and try again")
+                    }
+                    print("Error: \(String(describing: error))")
+                } else {
+                    print(refer)
+                    print("Child correctly removed")
+                }
+            })
+            watchList.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+        }
+    }
+    
 }
