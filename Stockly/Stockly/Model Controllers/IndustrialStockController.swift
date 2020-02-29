@@ -20,13 +20,6 @@ class IndustrialStockController {
     var swkStock: Batch?
     var industrialStock: Batch?
     
-    enum HTTPMethod: String {
-        case get = "GET"
-        case put = "PUT"
-        case post = "POST"
-        case delete = "DELETE"
-    }
-    
     func fetchIndustrialStocks(completion: @escaping (Error?) -> Void) {
         //forms url
         var components = URLComponents()

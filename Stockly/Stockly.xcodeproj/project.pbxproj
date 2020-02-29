@@ -43,7 +43,6 @@
 		57F765DB2295848700431F79 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F765DA2295848700431F79 /* MainTabBarController.swift */; };
 		57F765DD229584EB00431F79 /* Credit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F765DC229584EB00431F79 /* Credit.swift */; };
 		57F765DF229586AD00431F79 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F765DE229586AD00431F79 /* WelcomeViewController.swift */; };
-		57F765E12295980200431F79 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57F765E02295980200431F79 /* Onboarding.storyboard */; };
 		57F765E32295997800431F79 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F765E22295997800431F79 /* SignInViewController.swift */; };
 		57F765E52295998F00431F79 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F765E42295998F00431F79 /* SignUpViewController.swift */; };
 		57F765EB2295C96400431F79 /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F765EA2295C96400431F79 /* CurrentUser.swift */; };
@@ -389,7 +388,6 @@
 				576022512294E22D003F1784 /* LaunchScreen.storyboard in Resources */,
 				5760224E2294E22D003F1784 /* Assets.xcassets in Resources */,
 				5760224C2294E226003F1784 /* Main.storyboard in Resources */,
-				57F765E12295980200431F79 /* Onboarding.storyboard in Resources */,
 				57F765C62294E66000431F79 /* Default-568h@2x.png in Resources */,
 				575BE6262294E39C00456C12 /* GoogleService-Info.plist in Resources */,
 			);
@@ -630,7 +628,7 @@
 				CODE_SIGN_ENTITLEMENTS = Stockly/Stockly.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 45;
+				CURRENT_PROJECT_VERSION = 47;
 				DEVELOPMENT_TEAM = J95SPSM87P;
 				INFOPLIST_FILE = Stockly/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -638,7 +636,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.4;
+				MARKETING_VERSION = 1.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.victorruiz.Stockly;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = Vick;
@@ -655,7 +653,7 @@
 				CODE_SIGN_ENTITLEMENTS = Stockly/Stockly.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 45;
+				CURRENT_PROJECT_VERSION = 47;
 				DEVELOPMENT_TEAM = J95SPSM87P;
 				INFOPLIST_FILE = Stockly/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -663,7 +661,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.4;
+				MARKETING_VERSION = 1.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.victorruiz.Stockly;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = Vick;

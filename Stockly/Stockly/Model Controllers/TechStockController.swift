@@ -20,13 +20,6 @@ class TechStockController {
     var babaStock: Batch?
     var techStock: Batch?
     
-    enum HTTPMethod: String {
-        case get = "GET"
-        case put = "PUT"
-        case post = "POST"
-        case delete = "DELETE"
-    }
-    
     func fetchTechStocks(completion: @escaping (Error?) -> Void) {
         //forms url
         var components = URLComponents()

@@ -20,13 +20,6 @@ class HealthStockController {
     var antmStock: Batch?
     var healthStock: Batch?
     
-    enum HTTPMethod: String {
-        case get = "GET"
-        case put = "PUT"
-        case post = "POST"
-        case delete = "DELETE"
-    }
-    
     func fetchHealthStocks(completion: @escaping (Error?) -> Void) {
         //forms url
         var components = URLComponents()

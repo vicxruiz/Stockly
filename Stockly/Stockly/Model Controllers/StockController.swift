@@ -8,6 +8,14 @@
 
 import Foundation
 
+enum HTTPMethod: String {
+    case get = "GET"
+    case put = "PUT"
+    case post = "POST"
+    case delete = "DELETE"
+}
+
+
 class StockController {
     //MARK: Properties
     
@@ -22,13 +30,6 @@ class StockController {
     var stockBatch: Batch?
     var stockLogoURL: String?
     var searchStocks: [SearchStock] = []
-    
-    enum HTTPMethod: String {
-        case get = "GET"
-        case put = "PUT"
-        case post = "POST"
-        case delete = "DELETE"
-    }
     
     func fetchSector(completion: @escaping (Error?) -> Void) {
         //forms url
