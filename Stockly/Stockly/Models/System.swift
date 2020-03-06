@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct System {
     static func clearNavigationBar(forBar navBar: UINavigationBar) {

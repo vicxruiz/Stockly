@@ -10,10 +10,14 @@ import Foundation
 import UIKit
 
 class SearchTableViewCell: UITableViewCell {
+    
+    //MARK: - Outlets
+    
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var symbolLabel: UILabel!
     @IBOutlet weak var exchangeLabel: UILabel!
     
+    //MARK: - Properties
     
     var stock: SearchStock? {
         didSet {
@@ -21,6 +25,7 @@ class SearchTableViewCell: UITableViewCell {
         }
     }
     
+    //MARK: Helpers
     
     func updateViews() {
         guard let stock = stock else {return}

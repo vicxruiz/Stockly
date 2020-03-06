@@ -10,7 +10,6 @@ import Foundation
 import UIKit
 
 class KeyDataTableViewCell: UITableViewCell {
-    
     @IBOutlet weak var keyDataKeyLabel: UILabel!
     @IBOutlet weak var keyDataValueLabel: UILabel!
 }
@@ -18,6 +17,4 @@ class KeyDataTableViewCell: UITableViewCell {
 class SearchKeyDataTableViewCell: UITableViewCell {
     @IBOutlet weak var keyDataKeyLabel: UILabel!
     @IBOutlet weak var keyDataValueLabel: UILabel!
-    
-    
 }

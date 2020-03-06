@@ -9,9 +9,7 @@
 import Foundation
 import UIKit
 
-
 class SymbolNewsCollectionViewCell: UICollectionViewCell {
-    
     @IBOutlet weak var headlineLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
 }

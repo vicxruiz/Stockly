@@ -8,17 +8,26 @@
 
 import Foundation
 import UIKit
+
 class WatchListTableViewCell: UITableViewCell {
+    
+    //MARK: - Outlets
+    
     @IBOutlet weak var latestPriceLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var symbolLabel: UILabel!
     @IBOutlet weak var percentLabel: UILabel!
-    var dataGetter: DataGetter?
+
+    //MARK: - Properties
+    
     var stock: UserStock? {
         didSet {
             updateViews()
         }
     }
+    
+    //MARK: - Helpers
+    
     func updateViews() {
         percentLabel.layer.masksToBounds = true
         percentLabel.layer.cornerRadius = 5
@@ -37,4 +46,5 @@ class WatchListTableViewCell: UITableViewCell {
             percentLabel.textColor = UIColor.green
         }
     }
+    
 }

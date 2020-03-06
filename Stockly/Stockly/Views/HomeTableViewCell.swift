@@ -10,17 +10,22 @@ import Foundation
 import UIKit
 
 class HomeTableViewCell: UITableViewCell {
+    
+    //MARK: - Outlets
     @IBOutlet weak var stockNameLabel: UILabel!
     @IBOutlet weak var stockPriceLabel: UILabel!
     @IBOutlet weak var stockSymbolLabel: UILabel!
     @IBOutlet weak var stockChangeLabel: UILabel!
-    var dataGetter: DataGetter?
+    
+    //MARK: - Properties
     
     var stock: Batch? {
         didSet {
             updateViews()
         }
     }
+    
+    //MARK: Helpers
     
     func updateViews() {
         stockChangeLabel.layer.masksToBounds = true

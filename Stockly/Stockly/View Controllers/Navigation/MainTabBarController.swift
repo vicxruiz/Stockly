@@ -11,13 +11,16 @@ import UIKit
 
 class MainTabBarController: UITabBarController {
     
+    //MARK: - View Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        //checks logged in status of user
         self.tabBar.layer.borderWidth = 0
         self.tabBar.clipsToBounds = true
         setupViewControllers()
     }
+    
+    //MARK: - Helpers
     
     fileprivate func setupViewControllers() {
         tabBar.unselectedItemTintColor = Service.designGrayColor
