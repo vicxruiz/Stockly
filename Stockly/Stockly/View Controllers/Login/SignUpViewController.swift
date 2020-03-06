@@ -15,10 +15,14 @@ import LBTAComponents
 import FirebaseDatabase
 
 class SignUpViewController: UIViewController, UITextFieldDelegate {
-    //Properties
+    
+    //MARK: - Outlets
+    
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var signUpAccept: UIButton!
+    //MARK: - Properties
     
     let hud: JGProgressHUD = {
         let hud = JGProgressHUD(style: .dark)
@@ -26,7 +30,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         return hud
     }()
     
-    @IBOutlet weak var signUpAccept: UIButton!
+    //MARK: - Actions
     
     @IBAction func signUpButtonPressed(_ sender: Any) {
         //error handling and ui presentations
@@ -80,24 +84,20 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    //MARK: Checks
+    //MARK: Helpers
     
-    //name check
     func isValidName(testStr:String) -> Bool {
         let nameRegEx = "^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$"
         let nameTest = NSPredicate(format:"SELF MATCHES %@", nameRegEx)
         return nameTest.evaluate(with: testStr)
     }
     
-    //email check
     func isValidEmail(testStr:String) -> Bool {
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
-        
         let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
         return emailTest.evaluate(with: testStr)
     }
     
-    //adds data to database
     func saveUserIntoFirebase() {
         guard let name = usernameField.text else {return}
         guard let email = emailField.text else {return}
@@ -116,6 +116,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    //MARK: - View Lifecycle
     
     override func viewDidLoad() {
         if let navController = navigationController {
@@ -126,16 +127,17 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         signUpAccept.layer.masksToBounds = true
         signUpAccept.layer.cornerRadius = 5
         self.hideKeyboardWhenTappedAround()
-        //        usernameField.addTarget(self, action: #selector(editingChanged(_:)), for: .editingChanged)
     }
-    
+}
+
+//MARK: - Navigation
+extension SignUpViewController {
     override func prepare(for segue: UIStoryboardSegue?, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-        let backItem = UIBarButtonItem()
-        navigationItem.backBarButtonItem = backItem
-        navigationItem.backBarButtonItem?.tintColor = UIColor.init(r: 255/255, g: 135/255, b: 135/255, a: 1)
-    }
-    
+           // Get the new view controller using segue.destinationViewController.
+           // Pass the selected object to the new view controller.
+           let backItem = UIBarButtonItem()
+           navigationItem.backBarButtonItem = backItem
+           navigationItem.backBarButtonItem?.tintColor = UIColor.init(r: 255/255, g: 135/255, b: 135/255, a: 1)
+       }
 }
 

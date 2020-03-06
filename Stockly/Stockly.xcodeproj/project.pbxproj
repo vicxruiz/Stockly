@@ -48,6 +48,7 @@
 		57F765EB2295C96400431F79 /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F765EA2295C96400431F79 /* CurrentUser.swift */; };
 		5FE9D54C2EA0A29077A5DCE7 /* Pods_Stockly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8896165C8C1E1A1C568E34C2 /* Pods_Stockly.framework */; };
 		982B97242411E0E500A899C0 /* UIViewController+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982B97232411E0E500A899C0 /* UIViewController+Keyboard.swift */; };
+		982B97262411E2B500A899C0 /* System.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982B97252411E2B500A899C0 /* System.swift */; };
 		986DBC7B23D3DD8200023A63 /* OnboardingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986DBC7A23D3DD8200023A63 /* OnboardingPageViewController.swift */; };
 		986DBC7D23D3DDB500023A63 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986DBC7C23D3DDB500023A63 /* OnboardingViewController.swift */; };
 		986DBC7F23D3DDD000023A63 /* OnboardingContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986DBC7E23D3DDD000023A63 /* OnboardingContentViewController.swift */; };
@@ -101,6 +102,7 @@
 		57F765EA2295C96400431F79 /* CurrentUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
 		8896165C8C1E1A1C568E34C2 /* Pods_Stockly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Stockly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		982B97232411E0E500A899C0 /* UIViewController+Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Keyboard.swift"; sourceTree = "<group>"; };
+		982B97252411E2B500A899C0 /* System.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = System.swift; sourceTree = "<group>"; };
 		986DBC7A23D3DD8200023A63 /* OnboardingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageViewController.swift; sourceTree = "<group>"; };
 		986DBC7C23D3DDB500023A63 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		986DBC7E23D3DDD000023A63 /* OnboardingContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContentViewController.swift; sourceTree = "<group>"; };
@@ -205,6 +207,7 @@
 				57F765EA2295C96400431F79 /* CurrentUser.swift */,
 				574C846222B2EA5200390342 /* Collection.swift */,
 				57811EF422BC7E2A0000A046 /* UserStock.swift */,
+				982B97252411E2B500A899C0 /* System.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -481,6 +484,7 @@
 				57811EF722BC85360000A046 /* WatchListTableViewCell.swift in Sources */,
 				57F765EB2295C96400431F79 /* CurrentUser.swift in Sources */,
 				986DBC7F23D3DDD000023A63 /* OnboardingContentViewController.swift in Sources */,
+				982B97262411E2B500A899C0 /* System.swift in Sources */,
 				571701AD22975E6800361B09 /* ResultsViewController.swift in Sources */,
 				982B97242411E0E500A899C0 /* UIViewController+Keyboard.swift in Sources */,
 				571701AB22975A0400361B09 /* SearchViewController.swift in Sources */,

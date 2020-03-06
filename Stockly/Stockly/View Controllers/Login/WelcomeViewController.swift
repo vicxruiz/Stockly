@@ -19,31 +19,27 @@ import FBSDKCoreKit
 import FBSDKLoginKit
 import AuthenticationServices
 
-//updates nav bar for clear background
-struct System {
-    static func clearNavigationBar(forBar navBar: UINavigationBar) {
-        navBar.setBackgroundImage(UIImage(), for: .default)
-        navBar.shadowImage = UIImage()
-        navBar.isTranslucent = true
-    }
-}
-
 class WelcomeController: UIViewController {
-    //Properties
+    
+    //MARK: - Outlets
+    
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var facebookButton: UIButton!
     @IBOutlet weak var dismissScreenButton: UIBarButtonItem!
+    
+    //MARK: - Properties
+    
     var name: String?
     var email: String?
     var phoneNumber: String?
-    
-    //shows indicator sign
     let hud: JGProgressHUD = {
         let hud = JGProgressHUD(style: .dark)
         hud.interactionType = .blockAllTouches
         return hud
     }()
+    
+    //MARK: View Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,7 +47,7 @@ class WelcomeController: UIViewController {
         updateButtonViews()
     }
     
-    //MARK: Views
+    //MARK: Helpers
     
     func updateButtonViews() {
         facebookButton.layer.masksToBounds = true
@@ -67,12 +63,10 @@ class WelcomeController: UIViewController {
     
     func updateNavBar() {
         navigationController?.navigationBar.prefersLargeTitles = true
-        
         if let navController = navigationController {
             System.clearNavigationBar(forBar: navController.navigationBar)
             navController.view.backgroundColor = .clear
         }
-        
         //updates attributes
         navigationController?.navigationBar.barTintColor = Service.designGrayColor
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.groupTableViewBackground]
@@ -178,8 +172,11 @@ class WelcomeController: UIViewController {
             self.present(vc, animated: true, completion: nil)
         }
     }
-    
-    //MARK: Navigation
+}
+
+//MARK: - Navigation
+
+extension WelcomeController {
     override func prepare(for segue: UIStoryboardSegue?, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.

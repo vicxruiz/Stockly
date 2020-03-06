@@ -16,15 +16,16 @@ import FirebaseDatabase
 
 class SignInViewController: UIViewController {
     
-    //MARK: - Properties
+    //MARK: - Outlets
+    
     @IBOutlet weak var forgotPassword: UIButton!
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var dismissButton: UIButton!
     
+    //MARK: - Properties 
     
-
     let hud: JGProgressHUD = {
         let hud = JGProgressHUD(style: .dark)
         hud.interactionType = .blockAllTouches
@@ -84,9 +85,11 @@ class SignInViewController: UIViewController {
         }
         navigationController?.navigationBar.prefersLargeTitles = true
     }
-    
-    //MARK: - Navigation
-    
+}
+
+//MARK: - Navigation
+
+extension SignInViewController {
     override func prepare(for segue: UIStoryboardSegue?, sender: Any?) {
         let backItem = UIBarButtonItem()
         backItem.title = "Back"

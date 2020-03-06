@@ -13,13 +13,18 @@ import FirebaseDatabase
 
 class ForgotPasswordViewController: UIViewController {
     
+    //MARK: - Outlets
+    
     @IBOutlet weak var emailTextField: UITextField!
+    
+    //MARK: - View Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
-    //sends email to user for password reset
+    //MARK: - Actions
+    
     @IBAction func sendButtonPressed(_ sender: Any) {
         guard let email = emailTextField.text else {return}
         Auth.auth().sendPasswordReset(withEmail: email) { (error) in
