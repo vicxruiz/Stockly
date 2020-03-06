@@ -45,7 +45,9 @@ class SignInViewController: UIViewController {
             if let error = error {
                 self.hud.dismiss(animated: true)
                 print("Failed to sign in with error", error)
-                Service.showAlert(on: self, style: .alert, title: "Sign In Error", message: error.localizedDescription)
+                DispatchQueue.main.async {
+                    Service.showAlert(on: self, style: .alert, title: "Sign In Error", message: error.localizedDescription)
+                }
                 return
             }
             self.hud.dismiss(animated: true)
