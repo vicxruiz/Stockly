@@ -47,6 +47,7 @@
 		57F765E52295998F00431F79 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F765E42295998F00431F79 /* SignUpViewController.swift */; };
 		57F765EB2295C96400431F79 /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F765EA2295C96400431F79 /* CurrentUser.swift */; };
 		5FE9D54C2EA0A29077A5DCE7 /* Pods_Stockly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8896165C8C1E1A1C568E34C2 /* Pods_Stockly.framework */; };
+		982B97242411E0E500A899C0 /* UIViewController+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982B97232411E0E500A899C0 /* UIViewController+Keyboard.swift */; };
 		986DBC7B23D3DD8200023A63 /* OnboardingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986DBC7A23D3DD8200023A63 /* OnboardingPageViewController.swift */; };
 		986DBC7D23D3DDB500023A63 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986DBC7C23D3DDB500023A63 /* OnboardingViewController.swift */; };
 		986DBC7F23D3DDD000023A63 /* OnboardingContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986DBC7E23D3DDD000023A63 /* OnboardingContentViewController.swift */; };
@@ -99,6 +100,7 @@
 		57F765E42295998F00431F79 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		57F765EA2295C96400431F79 /* CurrentUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
 		8896165C8C1E1A1C568E34C2 /* Pods_Stockly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Stockly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		982B97232411E0E500A899C0 /* UIViewController+Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Keyboard.swift"; sourceTree = "<group>"; };
 		986DBC7A23D3DD8200023A63 /* OnboardingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageViewController.swift; sourceTree = "<group>"; };
 		986DBC7C23D3DDB500023A63 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		986DBC7E23D3DDD000023A63 /* OnboardingContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContentViewController.swift; sourceTree = "<group>"; };
@@ -263,6 +265,7 @@
 		576022452294E226003F1784 /* Stockly */ = {
 			isa = PBXGroup;
 			children = (
+				982B97222411E05800A899C0 /* Extensions */,
 				5729E39823856F35007EE0B1 /* Stockly.entitlements */,
 				574C846422B2EC7600390342 /* Networking */,
 				5763D2D622B2E99E002C5324 /* Model Controllers */,
@@ -313,6 +316,14 @@
 				B6EF84E33B3923BA090D16A3 /* Pods-Stockly.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		982B97222411E05800A899C0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				982B97232411E0E500A899C0 /* UIViewController+Keyboard.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		986DBC7923D3DD5100023A63 /* Onboarding */ = {
@@ -471,6 +482,7 @@
 				57F765EB2295C96400431F79 /* CurrentUser.swift in Sources */,
 				986DBC7F23D3DDD000023A63 /* OnboardingContentViewController.swift in Sources */,
 				571701AD22975E6800361B09 /* ResultsViewController.swift in Sources */,
+				982B97242411E0E500A899C0 /* UIViewController+Keyboard.swift in Sources */,
 				571701AB22975A0400361B09 /* SearchViewController.swift in Sources */,
 				574C846A22B2ECF500390342 /* StockController.swift in Sources */,
 				571701A7229757E100361B09 /* TableViewCell.swift in Sources */,

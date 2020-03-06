@@ -15,43 +15,23 @@ import FirebaseStorage
 import FirebaseDatabase
 
 class SignInViewController: UIViewController {
-    //Properties
+    
+    //MARK: - Properties
     @IBOutlet weak var forgotPassword: UIButton!
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var dismissButton: UIButton!
     
+    
+
     let hud: JGProgressHUD = {
         let hud = JGProgressHUD(style: .dark)
         hud.interactionType = .blockAllTouches
         return hud
     }()
     
-    //Actions
-    
-    @IBAction func dismissButtonPressed(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-    }
-    
-    @IBAction func forgotPasswordButtonPressed(_ sender: Any) {
-        performSegue(withIdentifier: "ForgotPasswordSegue", sender: self)
-    }
-    
-    override func viewDidLoad() {
-        updateNavBar()
-        loginButton.layer.masksToBounds = true
-        loginButton.layer.cornerRadius = 5
-        self.hideKeyboardWhenTappedAround()
-    }
-    
-    func updateNavBar() {
-        if let navController = navigationController {
-            System.clearNavigationBar(forBar: navController.navigationBar)
-            navController.view.backgroundColor = .clear
-        }
-        navigationController?.navigationBar.prefersLargeTitles = true
-    }
+    //MARK: - Actions
     
     //Handles logic to when sign in button is tapped
     @IBAction func signInButtonTapped(_ sender: Any) {
@@ -75,30 +55,40 @@ class SignInViewController: UIViewController {
             self.present(vc, animated: true, completion: nil)
         }
     }
-    
-    
-    //handles keyboard functionality
-    func textFieldShouldReturn(emailField: UITextField) -> Bool {
-        emailField.resignFirstResponder()
-        return true
+
+    @IBAction func dismissButtonPressed(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
+    
+    @IBAction func forgotPasswordButtonPressed(_ sender: Any) {
+        performSegue(withIdentifier: "ForgotPasswordSegue", sender: self)
+    }
+    
+    //MARK: - View Lifecycle
+    
+    override func viewDidLoad() {
+        updateNavBar()
+        loginButton.layer.masksToBounds = true
+        loginButton.layer.cornerRadius = 5
+        self.hideKeyboardWhenTappedAround()
+    }
+    
+    //MARK: - Helper Functions
+    
+    func updateNavBar() {
+        if let navController = navigationController {
+            System.clearNavigationBar(forBar: navController.navigationBar)
+            navController.view.backgroundColor = .clear
+        }
+        navigationController?.navigationBar.prefersLargeTitles = true
+    }
+    
+    //MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue?, sender: Any?) {
         let backItem = UIBarButtonItem()
         backItem.title = "Back"
         navigationItem.backBarButtonItem = backItem
         navigationItem.backBarButtonItem?.tintColor = Service.designGrayColor
-    }
-}
-
-//keyboard functionality
-extension UIViewController {
-    func hideKeyboardWhenTappedAround() {
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
-        view.addGestureRecognizer(tap)
-    }
-    
-    @objc func dismissKeyboard() {
-        view.endEditing(true)
     }
 }
