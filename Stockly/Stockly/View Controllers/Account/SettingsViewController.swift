@@ -12,15 +12,21 @@ import FirebaseDatabase
 
 class SettingsViewController: UITableViewController {
     
+    //MARK: - Outlets
+    
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var logOutButton: UIButton!
+    
+    //MARK: - View Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         updateViews()
         logOutButton.addTarget(self, action: #selector(handleSignOutButtonTapped), for: .touchUpInside)
     }
+    
+    //MARK: - Helpers
     
     func updateViews() {
         guard let currentUser = Auth.auth().currentUser else {
