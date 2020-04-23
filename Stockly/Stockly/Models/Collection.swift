@@ -27,7 +27,6 @@ struct StockCompany: Codable {
     let employees: Int
 }
 
-
 struct Sector: Equatable {
     var name: String
     var isChosen: Bool
@@ -67,7 +66,6 @@ struct Batch: Decodable {
     let chart: [Chart]
 }
 
-
 struct Quote : Decodable {
     let symbol: String
     let companyName: String
@@ -89,7 +87,6 @@ struct Quote : Decodable {
     let peRatio: Double?
 }
 
-
 struct News: Decodable {
     let datetime: Int?
     let headline: String?
@@ -98,7 +95,6 @@ struct News: Decodable {
     let summary: String?
     let related: String?
 }
-
 
 struct Chart: Decodable {
     let date: String?
