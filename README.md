@@ -10,7 +10,7 @@
 
 Stock.ly provides a live analysis of every stock across a number of markets to provide you with all of the information you need to make smart decisions with your investment capital.
 
-Demo the app by downloading it from TestFlight.
+Download here: https://apps.apple.com/us/app/%CF%83tockly/id1488504426
 
 <br>
 
