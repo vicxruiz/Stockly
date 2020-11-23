@@ -25,6 +25,8 @@ class WatchListTableViewCell: UITableViewCell {
             updateViews()
         }
     }
+	
+	var dataGetter: DataGetter!
     
     //MARK: - Helpers
     

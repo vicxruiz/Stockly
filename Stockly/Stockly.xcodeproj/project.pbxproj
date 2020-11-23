@@ -37,7 +37,6 @@
 		57BA390822BC498B0067D651 /* OnboardingNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BA390722BC498B0067D651 /* OnboardingNavigationViewController.swift */; };
 		57BB55CB22BFC604001F6AB5 /* SearchAnalyzeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BB55CA22BFC604001F6AB5 /* SearchAnalyzeViewController.swift */; };
 		57C03B34234BC7B300611AA2 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C03B33234BC7B200611AA2 /* SearchTableViewCell.swift */; };
-		57F765C62294E66000431F79 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 57F765C52294E66000431F79 /* Default-568h@2x.png */; };
 		57F765D62294EB1B00431F79 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F765D52294EB1B00431F79 /* Service.swift */; };
 		57F765D92295844A00431F79 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F765D82295844A00431F79 /* LaunchScreenViewController.swift */; };
 		57F765DB2295848700431F79 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F765DA2295848700431F79 /* MainTabBarController.swift */; };
@@ -90,7 +89,6 @@
 		57BB55CA22BFC604001F6AB5 /* SearchAnalyzeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAnalyzeViewController.swift; sourceTree = "<group>"; };
 		57C03B31234B9CE800611AA2 /* iOSDropDown.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = iOSDropDown.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		57C03B33234BC7B200611AA2 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
-		57F765C52294E66000431F79 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		57F765D52294EB1B00431F79 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		57F765D82295844A00431F79 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
 		57F765DA2295848700431F79 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
@@ -249,7 +247,6 @@
 		5760223A2294E226003F1784 = {
 			isa = PBXGroup;
 			children = (
-				57F765C52294E66000431F79 /* Default-568h@2x.png */,
 				576022452294E226003F1784 /* Stockly */,
 				576022442294E226003F1784 /* Products */,
 				6B90094933674CD237A1EA42 /* Pods */,
@@ -402,7 +399,6 @@
 				576022512294E22D003F1784 /* LaunchScreen.storyboard in Resources */,
 				5760224E2294E22D003F1784 /* Assets.xcassets in Resources */,
 				5760224C2294E226003F1784 /* Main.storyboard in Resources */,
-				57F765C62294E66000431F79 /* Default-568h@2x.png in Resources */,
 				575BE6262294E39C00456C12 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

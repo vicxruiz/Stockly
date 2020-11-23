@@ -24,6 +24,7 @@ class HomeTableViewCell: UITableViewCell {
             updateViews()
         }
     }
+	var dataGetter: DataGetter!
     
     //MARK: Helpers
     
