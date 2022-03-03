@@ -51,6 +51,8 @@
 		986DBC7B23D3DD8200023A63 /* OnboardingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986DBC7A23D3DD8200023A63 /* OnboardingPageViewController.swift */; };
 		986DBC7D23D3DDB500023A63 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986DBC7C23D3DDB500023A63 /* OnboardingViewController.swift */; };
 		986DBC7F23D3DDD000023A63 /* OnboardingContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986DBC7E23D3DDD000023A63 /* OnboardingContentViewController.swift */; };
+		98B84D4C27D0581C00103D9C /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B84D4B27D0581C00103D9C /* ProfileController.swift */; };
+		98F9DB4227D06F5100632A08 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57F765E02295980200431F79 /* Onboarding.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -104,6 +106,7 @@
 		986DBC7A23D3DD8200023A63 /* OnboardingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageViewController.swift; sourceTree = "<group>"; };
 		986DBC7C23D3DDB500023A63 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		986DBC7E23D3DDD000023A63 /* OnboardingContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContentViewController.swift; sourceTree = "<group>"; };
+		98B84D4B27D0581C00103D9C /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		B6EF84E33B3923BA090D16A3 /* Pods-Stockly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stockly.release.xcconfig"; path = "Target Support Files/Pods-Stockly/Pods-Stockly.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -297,6 +300,7 @@
 				57873DC322BAC64E00C4F311 /* TechStockController.swift */,
 				57873DC522BAD5B000C4F311 /* HealthStockController.swift */,
 				57873DC722BAD5C300C4F311 /* IndustrialStockController.swift */,
+				98B84D4B27D0581C00103D9C /* ProfileController.swift */,
 			);
 			path = "Model Controllers";
 			sourceTree = "<group>";
@@ -397,6 +401,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				576022512294E22D003F1784 /* LaunchScreen.storyboard in Resources */,
+				98F9DB4227D06F5100632A08 /* Onboarding.storyboard in Resources */,
 				5760224E2294E22D003F1784 /* Assets.xcassets in Resources */,
 				5760224C2294E226003F1784 /* Main.storyboard in Resources */,
 				575BE6262294E39C00456C12 /* GoogleService-Info.plist in Resources */,
@@ -467,6 +472,7 @@
 				576022472294E226003F1784 /* AppDelegate.swift in Sources */,
 				986DBC7B23D3DD8200023A63 /* OnboardingPageViewController.swift in Sources */,
 				574C846322B2EA5200390342 /* Collection.swift in Sources */,
+				98B84D4C27D0581C00103D9C /* ProfileController.swift in Sources */,
 				57BB55CB22BFC604001F6AB5 /* SearchAnalyzeViewController.swift in Sources */,
 				57811EF522BC7E2A0000A046 /* UserStock.swift in Sources */,
 				57BA390822BC498B0067D651 /* OnboardingNavigationViewController.swift in Sources */,
@@ -638,9 +644,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Stockly/Stockly.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 47;
+				CURRENT_PROJECT_VERSION = 48;
 				DEVELOPMENT_TEAM = J95SPSM87P;
 				INFOPLIST_FILE = Stockly/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -648,10 +654,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.0;
+				MARKETING_VERSION = 1.3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.victorruiz.Stockly;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = Vick;
+				PROVISIONING_PROFILE_SPECIFIER = VicDev;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -663,9 +669,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Stockly/Stockly.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 47;
+				CURRENT_PROJECT_VERSION = 48;
 				DEVELOPMENT_TEAM = J95SPSM87P;
 				INFOPLIST_FILE = Stockly/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -673,10 +679,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.0;
+				MARKETING_VERSION = 1.3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.victorruiz.Stockly;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = Vick;
+				PROVISIONING_PROFILE_SPECIFIER = VicDev;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

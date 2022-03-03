@@ -16,9 +16,11 @@ import JGProgressHUD
 class ProfileTableViewController: UITableViewController {
     
     var watchList: [UserStock] = []
+	var symbolList: [String] = []
     var ref: DatabaseReference!
     var dataGetter = DataGetter()
-    
+	var timer: Timer?
+	var profileController = ProfileController()
     
     let hud: JGProgressHUD = {
         let hud = JGProgressHUD(style: .light)
@@ -28,58 +30,19 @@ class ProfileTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        hud.textLabel.text = "Loading Watchlist..."
-        hud.show(in: view, animated: true)
-        addStockToArray()
     }
-    
-    func addStockToArray() {
-        guard let uid = Auth.auth().currentUser?.uid else {return}
-        ref = Database.database().reference().child("users").child(uid).child("WatchList")
-        ref.observe(.value) { (snapShot) in
-            if snapShot.childrenCount > 0 {
-                self.watchList.removeAll()
-                for myStocks in snapShot.children.allObjects as! [DataSnapshot] {
-                    let stockObject = myStocks.value as? [String: AnyObject]
-                    guard let stockName = stockObject?["stock name"] as? String else {
-                        print("name not returned")
-                        return
-                    }
-                    guard let stockSymbol = stockObject?["stock symbol"] as? String else {
-                        print("symbol not returned")
-                        return
-                    }
-                    guard let stockPercentage = stockObject?["stock percent"] as? String else {
-                        print("percent not returned")
-                        return
-                    }
-                    guard let stockPrice = stockObject?["stock price"] as? String else {
-                        print("price not returned")
-                        return
-                    }
-                    guard let stockID = stockObject?["id"] as? String else {
-                        print("id not returned")
-                        return
-                    }
-                    
-                    guard let percent = Double(stockPercentage) else {
-                        print("no percent")
-                        return}
-                    guard let price = Double(stockPrice) else {
-                        print("no price")
-                        return}
-                    let myStock = UserStock(id: stockID, stockSymbol: stockSymbol, stockName: stockName, stockPercentage: percent, stockLatestPrice: price)
-                    self.watchList.append(myStock)
-                    self.hud.dismiss(animated: true)
-                    self.tableView.reloadData()
-                    print("done reloading with obj")
-                }
-            } else {
-                print("no children")
-                self.hud.dismiss()
-            }
-        }
-    }
+	
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
+		hud.textLabel.text = "Loading Watchlist..."
+		hud.show(in: view, animated: true)
+		addStockToArray()
+	}
+	
+	override func viewDidDisappear(_ animated: Bool) {
+		super.viewDidDisappear(animated)
+		timer?.invalidate()
+	}
     
     override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         //updates header view ui
@@ -146,4 +109,59 @@ class ProfileTableViewController: UITableViewController {
         }
     }
     
+}
+
+extension ProfileTableViewController {
+	func addStockToArray() {
+		guard let uid = Auth.auth().currentUser?.uid else {return}
+		ref = Database.database().reference().child("users").child(uid).child("WatchList")
+		ref.observe(.value) { (snapShot) in
+			if snapShot.childrenCount > 0 {
+				self.symbolList.removeAll()
+				for myStocks in snapShot.children.allObjects as! [DataSnapshot] {
+					let stockObject = myStocks.value as? [String: AnyObject]
+					guard let stockSymbol = stockObject?["stock symbol"] as? String else {
+						print("symbol not returned")
+						return
+					}
+					self.symbolList.append(stockSymbol)
+				}
+				self.updateStockData()
+			} else {
+				self.hud.dismiss()
+			}
+		}
+	}
+	
+	func updateStockData() {
+		timer = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(fireTimer), userInfo: nil, repeats: true)
+	}
+	
+	@objc func fireTimer() {
+		self.watchList.removeAll()
+		let dispatchGroup = DispatchGroup()
+		for symbol in symbolList {
+			dispatchGroup.enter()
+			profileController.fetchStock(symbol) { error, batch in
+				if let error = error {
+					DispatchQueue.main.async {
+						Service.showAlert(on: self, style: .alert, title: "Error fetching stock", message: error.localizedDescription)
+					}
+					return
+				}
+				if let batch = batch {
+					let quote = batch.quote
+					let myStock = UserStock(id: quote.symbol, stockSymbol: quote.symbol, stockName: quote.companyName, stockPercentage: quote.changePercent ?? 0.0, stockLatestPrice: quote.latestPrice ?? 0.0)
+					self.watchList.append(myStock)
+				}
+				dispatchGroup.leave()
+			}
+		}
+		dispatchGroup.notify(queue: .main) {
+			self.watchList.sort { $0.stockName < $1.stockName }
+			self.hud.dismiss(animated: true)
+			self.tableView.reloadData()
+			print("tableView reloaded")
+		}
+	}
 }
